@@ -81,5 +81,199 @@
     "label": "Langue",
     "en": "English",
     "fr": "Français"
+  },
+  "contactPage": {
+    "badge": "nous-contacter",
+    "title": "Construisons Quelque Chose Ensemble",
+    "description": "Vous avez un projet en tête ? Nous serions ravis d'en entendre parler. Dites-nous ce que vous recherchez et nous vous répondrons sous 24 heures.",
+    "formTitle": "Envoyez-nous un Message",
+    "infoTitle": "Coordonnées",
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "Email",
+      "emailPlaceholder": "vous@entreprise.com",
+      "company": "Entreprise",
+      "companyPlaceholder": "Le nom de votre entreprise",
+      "message": "Message",
+      "messagePlaceholder": "Parlez-nous de votre projet, vos objectifs, et comment nous pouvons vous aider...",
+      "optional": "optionnel",
+      "submit": "Envoyer le Message",
+      "sending": "Envoi en cours...",
+      "successTitle": "Message Envoyé !",
+      "successMessage": "Merci de nous avoir contactés. Nous vous répondrons sous 24 heures.",
+      "errors": {
+        "nameRequired": "Veuillez entrer votre nom",
+        "emailInvalid": "Veuillez entrer une adresse email valide",
+        "messageRequired": "Veuillez entrer un message (au moins 10 caractères)"
+      }
+    },
+    "info": {
+      "emailLabel": "Email",
+      "locationLabel": "Localisation",
+      "locationValue": "France (Remote-first)",
+      "responseLabel": "Délai de Réponse",
+      "responseValue": "Sous 24 heures"
+    },
+    "whyContact": {
+      "title": "Que se passe-t-il ensuite ?",
+      "reason1": "Nous examinons votre message sous 24 heures",
+      "reason2": "Nous planifions un appel découverte gratuit",
+      "reason3": "Nous vous fournissons une proposition personnalisée"
+    }
+  },
+  "servicesPage": {
+    "badge": "ce-que-nous-construisons",
+    "title": "Des Solutions Logicielles Adaptées à Votre Entreprise",
+    "description": "Nous construisons des logiciels sur-mesure qui résolvent de vrais problèmes. Des applications web aux apps mobiles, chaque solution est adaptée à vos besoins et processus spécifiques.",
+    "services": {
+      "webApps": {
+        "title": "Applications Web",
+        "description": "Applications web modernes et réactives construites avec des technologies de pointe. Des portails clients aux tableaux de bord complexes, nous livrons des solutions performantes et évolutives.",
+        "feature1": "Design responsive pour tous les appareils",
+        "feature2": "Chargement rapide et performance optimisée",
+        "feature3": "Authentification sécurisée et gestion des données"
+      },
+      "mobileApps": {
+        "title": "Applications Mobiles",
+        "description": "Applications mobiles natives et multiplateformes que vos clients adoreront. Nous nous concentrons sur une UX intuitive et des performances fluides sur iOS et Android.",
+        "feature1": "Multiplateforme avec React Native",
+        "feature2": "Fonctionnalités hors-ligne",
+        "feature3": "Notifications push et mises à jour en temps réel"
+      },
+      "customTools": {
+        "title": "Outils Internes Sur-Mesure",
+        "description": "Rationalisez vos opérations avec des tableaux de bord personnalisés, des outils d'automatisation et des logiciels métier conçus autour de vos processus exacts.",
+        "feature1": "Adapté à vos processus métier",
+        "feature2": "Intégration avec les systèmes existants",
+        "feature3": "Automatisation des tâches répétitives"
+      },
+      "apiIntegrations": {
+        "title": "API & Intégrations",
+        "description": "Connectez vos systèmes de manière transparente. Nous construisons des API robustes et intégrons des services tiers pour faire fonctionner vos outils ensemble.",
+        "feature1": "APIs RESTful et GraphQL",
+        "feature2": "Intégrations de services tiers",
+        "feature3": "Synchronisation de données et webhooks"
+      }
+    },
+    "techStack": {
+      "title": "Notre Stack Technologique",
+      "description": "Nous utilisons des technologies modernes et éprouvées qui garantissent que votre logiciel est rapide, sécurisé et maintenable."
+    },
+    "approach": {
+      "title": "Notre Approche",
+      "description": "Nous combinons le développement accéléré par l'IA avec des méthodologies éprouvées pour livrer des logiciels de qualité plus rapidement.",
+      "speed": {
+        "title": "Accéléré par l'IA",
+        "description": "Utilisation d'outils IA pour accélérer le développement sans compromettre la qualité."
+      },
+      "quality": {
+        "title": "Qualité d'Abord",
+        "description": "Code propre, tests approfondis et bonnes pratiques garantissent une maintenabilité à long terme."
+      },
+      "support": {
+        "title": "Support Continu",
+        "description": "Nous ne disparaissons pas après le lancement. Support continu et mises à jour selon l'évolution de vos besoins."
+      }
+    },
+    "pricing": {
+      "title": "Tarification Personnalisée pour Chaque Projet",
+      "description": "Chaque entreprise est différente, donc chaque projet obtient un devis personnalisé. Nous travaillons avec votre budget pour offrir une valeur maximale. Pas de frais cachés, pas de surprises—juste une tarification transparente.",
+      "cta": "Obtenir un Devis Gratuit"
+    }
+  },
+  "portfolioPage": {
+    "badge": "nos-realisations",
+    "title": "Projets à Venir",
+    "description": "Nous construisons actuellement des projets passionnants pour nos premiers clients. Cette page présentera bientôt de vrais résultats et histoires de succès.",
+    "categories": {
+      "webApps": "Apps Web",
+      "mobileApps": "Apps Mobiles",
+      "tools": "Outils Sur-Mesure",
+      "integrations": "Intégrations"
+    },
+    "projectPlaceholder": "Projet en cours",
+    "projectStatus": "Bientôt disponible",
+    "honestSection": {
+      "title": "Nous Démarrons Tout Juste",
+      "description": "En tant que nouvelle agence, nous n'avons pas encore de portfolio de projets passés à vous montrer. Ce que nous avons, c'est une approche fraîche, des capacités de développement accélérées par l'IA, et la détermination de faire de chaque client précoce une histoire de succès."
+    },
+    "earlyBenefits": {
+      "title": "Pourquoi Être un Client Précoce ?",
+      "description": "Les adopteurs précoces bénéficient d'un traitement spécial. Voici ce que vous pouvez attendre.",
+      "benefit1": {
+        "title": "Attention Prioritaire",
+        "description": "Avec moins de clients, vous bénéficiez de plus de notre attention et de délais de réponse plus rapides."
+      },
+      "benefit2": {
+        "title": "Planning Flexible",
+        "description": "Nous nous adaptons à votre emploi du temps et à vos besoins au fur et à mesure que le projet évolue."
+      },
+      "benefit3": {
+        "title": "Tarifs Partenaire Fondateur",
+        "description": "Tarification spéciale pour les clients qui nous aident à construire notre portfolio et réputation."
+      }
+    },
+    "cta": {
+      "title": "Faites Partie de Notre Portfolio",
+      "description": "Votre projet pourrait être le premier présenté ici. Créons ensemble quelque chose d'incroyable.",
+      "button": "Démarrer Votre Projet"
+    }
+  },
+  "aboutPage": {
+    "badge": "a-propos",
+    "title": "Construire l'Avenir du Logiciel pour PME",
+    "description": "Nous croyons que chaque entreprise mérite un logiciel sur-mesure parfaitement adapté. L'IA a rendu cela possible—et nous sommes là pour le concrétiser.",
+    "story": {
+      "title": "Notre Histoire",
+      "paragraph1": "Corweb est né d'une observation simple : les petites et moyennes entreprises ont toujours eu besoin de logiciels sur-mesure, mais c'était toujours trop cher ou trop long à développer. Les grandes entreprises obtiennent des solutions adaptées tandis que les PME restent coincées avec des outils SaaS génériques qui ne conviennent jamais parfaitement.",
+      "paragraph2": "L'essor du développement assisté par l'IA a tout changé. Ce qui prenait des mois et coûtait des centaines de milliers d'euros peut maintenant être livré en semaines pour une fraction du prix. Il ne s'agit pas seulement de coder plus vite—c'est démocratiser l'accès au logiciel sur-mesure.",
+      "paragraph3": "Nous avons créé Corweb pour combler ce fossé. Notre mission est d'apporter des logiciels sur-mesure de qualité entreprise aux entreprises de toutes tailles, avec une tarification transparente, une livraison rapide et des solutions qui résolvent vraiment vos problèmes."
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "statement": "Rendre le logiciel sur-mesure accessible à chaque entreprise, quelle que soit sa taille. Nous combinons le développement accéléré par l'IA avec l'expertise humaine pour livrer des solutions adaptées à vos besoins exacts—rapides, abordables et durables."
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "description": "Les principes qui guident notre façon de travailler et ce que nous construisons.",
+      "value1": {
+        "title": "L'Honnêteté d'Abord",
+        "description": "Nous sommes francs sur ce que nous pouvons et ne pouvons pas faire. Pas de promesses excessives, pas de frais cachés, pas de surprises. Si quelque chose ne vous convient pas, nous vous le dirons."
+      },
+      "value2": {
+        "title": "Simplicité Avant Complexité",
+        "description": "Les meilleures solutions sont souvent les plus simples. Nous ne sur-concevons pas—nous construisons exactement ce dont vous avez besoin, ni plus, ni moins."
+      },
+      "value3": {
+        "title": "Votre Succès Est Notre Succès",
+        "description": "Nous ne sommes pas de simples prestataires—nous sommes des partenaires. Le succès de votre projet nous importe autant qu'à vous."
+      },
+      "value4": {
+        "title": "Rapidité Sans Compromis",
+        "description": "L'IA nous aide à avancer vite, mais nous ne compromettons jamais la qualité. Chaque ligne de code est revue, testée et construite pour durer."
+      }
+    },
+    "whyNow": {
+      "title": "Pourquoi Maintenant ?",
+      "description": "Le moment n'a jamais été aussi propice pour le développement de logiciels sur-mesure.",
+      "reason1": {
+        "title": "Développement Assisté par l'IA",
+        "description": "Les outils IA modernes accélèrent le développement sans compromettre la qualité, rendant le logiciel sur-mesure abordable pour les PME."
+      },
+      "reason2": {
+        "title": "Écosystèmes Matures",
+        "description": "L'écosystème JavaScript, les plateformes cloud et les outils open-source ont atteint un niveau de maturité permettant un développement rapide et fiable."
+      },
+      "reason3": {
+        "title": "Monde Remote-First",
+        "description": "Les entreprises sont plus digitales que jamais. Le besoin d'outils numériques personnalisés n'a jamais été aussi grand."
+      }
+    },
+    "cta": {
+      "title": "Travaillons Ensemble",
+      "description": "Prêt à construire un logiciel qui est vraiment le vôtre ? Nous serions ravis d'en apprendre plus sur votre projet.",
+      "button": "Nous Contacter"
+    }
   }
 }

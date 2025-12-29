@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
+import { MobileNav } from "./mobile-nav";
 
 const navKeys = ["home", "services", "portfolio", "about", "contact"] as const;
 
@@ -51,6 +52,7 @@ export function Header() {
           >
             {t("common.getInTouch")}
           </Link>
+          <MobileNav />
         </div>
       </div>
     </header>

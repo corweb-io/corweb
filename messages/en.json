@@ -81,5 +81,199 @@
     "label": "Language",
     "en": "English",
     "fr": "Français"
+  },
+  "contactPage": {
+    "badge": "get-in-touch",
+    "title": "Let's Build Something Together",
+    "description": "Have a project in mind? We'd love to hear about it. Tell us what you're looking for and we'll get back to you within 24 hours.",
+    "formTitle": "Send Us a Message",
+    "infoTitle": "Contact Information",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "company": "Company",
+      "companyPlaceholder": "Your company name",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project, your goals, and how we can help...",
+      "optional": "optional",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "successTitle": "Message Sent!",
+      "successMessage": "Thank you for reaching out. We'll get back to you within 24 hours.",
+      "errors": {
+        "nameRequired": "Please enter your name",
+        "emailInvalid": "Please enter a valid email address",
+        "messageRequired": "Please enter a message (at least 10 characters)"
+      }
+    },
+    "info": {
+      "emailLabel": "Email",
+      "locationLabel": "Location",
+      "locationValue": "France (Remote-first)",
+      "responseLabel": "Response Time",
+      "responseValue": "Within 24 hours"
+    },
+    "whyContact": {
+      "title": "What happens next?",
+      "reason1": "We review your message within 24 hours",
+      "reason2": "We schedule a free discovery call",
+      "reason3": "We provide a custom proposal"
+    }
+  },
+  "servicesPage": {
+    "badge": "what-we-build",
+    "title": "Software Solutions That Fit Your Business",
+    "description": "We build custom software that solves real problems. From web applications to mobile apps, every solution is tailored to your specific needs and workflows.",
+    "services": {
+      "webApps": {
+        "title": "Web Applications",
+        "description": "Modern, responsive web applications built with cutting-edge technologies. From customer portals to complex dashboards, we deliver performant and scalable solutions.",
+        "feature1": "Responsive design for all devices",
+        "feature2": "Fast loading and optimized performance",
+        "feature3": "Secure authentication and data handling"
+      },
+      "mobileApps": {
+        "title": "Mobile Applications",
+        "description": "Native and cross-platform mobile apps that your customers will love. We focus on intuitive UX and smooth performance across iOS and Android.",
+        "feature1": "Cross-platform with React Native",
+        "feature2": "Offline-first capabilities",
+        "feature3": "Push notifications and real-time updates"
+      },
+      "customTools": {
+        "title": "Custom Internal Tools",
+        "description": "Streamline your operations with custom dashboards, automation tools, and business software designed around your exact workflows.",
+        "feature1": "Tailored to your business processes",
+        "feature2": "Integration with existing systems",
+        "feature3": "Automation of repetitive tasks"
+      },
+      "apiIntegrations": {
+        "title": "API & Integrations",
+        "description": "Connect your systems seamlessly. We build robust APIs and integrate third-party services to make your tools work together.",
+        "feature1": "RESTful and GraphQL APIs",
+        "feature2": "Third-party service integrations",
+        "feature3": "Data synchronization and webhooks"
+      }
+    },
+    "techStack": {
+      "title": "Our Technology Stack",
+      "description": "We use modern, battle-tested technologies that ensure your software is fast, secure, and maintainable."
+    },
+    "approach": {
+      "title": "Our Approach",
+      "description": "We combine AI-accelerated development with proven methodologies to deliver quality software faster.",
+      "speed": {
+        "title": "AI-Accelerated",
+        "description": "Leveraging AI tools to accelerate development without compromising on quality."
+      },
+      "quality": {
+        "title": "Quality First",
+        "description": "Clean code, thorough testing, and best practices ensure long-term maintainability."
+      },
+      "support": {
+        "title": "Ongoing Support",
+        "description": "We don't disappear after launch. Continuous support and updates as your needs evolve."
+      }
+    },
+    "pricing": {
+      "title": "Custom Pricing for Every Project",
+      "description": "Every business is different, so every project gets a custom quote. We work with your budget to deliver maximum value. No hidden fees, no surprises—just transparent pricing.",
+      "cta": "Get a Free Quote"
+    }
+  },
+  "portfolioPage": {
+    "badge": "our-work",
+    "title": "Projects Coming Soon",
+    "description": "We're currently building exciting projects for our first clients. This page will soon showcase real results and success stories.",
+    "categories": {
+      "webApps": "Web Apps",
+      "mobileApps": "Mobile Apps",
+      "tools": "Custom Tools",
+      "integrations": "Integrations"
+    },
+    "projectPlaceholder": "Project in progress",
+    "projectStatus": "Coming soon",
+    "honestSection": {
+      "title": "We're Just Getting Started",
+      "description": "As a new agency, we don't have a portfolio of past projects to show you—yet. What we do have is a fresh approach, AI-accelerated development capabilities, and the dedication to make every early client a success story."
+    },
+    "earlyBenefits": {
+      "title": "Why Be an Early Client?",
+      "description": "Early adopters get special treatment. Here's what you can expect.",
+      "benefit1": {
+        "title": "Priority Attention",
+        "description": "With fewer clients, you get more of our focus and faster response times."
+      },
+      "benefit2": {
+        "title": "Flexible Timeline",
+        "description": "We work around your schedule and adapt to your needs as the project evolves."
+      },
+      "benefit3": {
+        "title": "Founding Partner Rates",
+        "description": "Special pricing for clients who help us build our portfolio and reputation."
+      }
+    },
+    "cta": {
+      "title": "Be Part of Our Portfolio",
+      "description": "Your project could be the first featured here. Let's create something amazing together.",
+      "button": "Start Your Project"
+    }
+  },
+  "aboutPage": {
+    "badge": "about-us",
+    "title": "Building the Future of SME Software",
+    "description": "We believe every business deserves custom software that fits perfectly. AI has made this possible—and we're here to make it happen.",
+    "story": {
+      "title": "Our Story",
+      "paragraph1": "Corweb was born from a simple observation: small and medium businesses have always needed custom software, but it's always been too expensive or too slow to build. Enterprise companies get tailored solutions while SMEs are stuck with one-size-fits-all SaaS tools that never quite fit.",
+      "paragraph2": "The rise of AI-powered development has changed everything. What used to take months and cost hundreds of thousands of euros can now be delivered in weeks at a fraction of the price. This isn't just about faster coding—it's about democratizing access to custom software.",
+      "paragraph3": "We started Corweb to bridge this gap. Our mission is to bring enterprise-quality custom software to businesses of all sizes, with transparent pricing, fast delivery, and solutions that actually solve your problems."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "statement": "To make custom software accessible to every business, regardless of size. We combine AI-accelerated development with human expertise to deliver solutions that fit your exact needs—fast, affordable, and built to last."
+    },
+    "values": {
+      "title": "Our Values",
+      "description": "The principles that guide how we work and what we build.",
+      "value1": {
+        "title": "Honesty First",
+        "description": "We're upfront about what we can and can't do. No overpromising, no hidden fees, no surprises. If something isn't right for you, we'll tell you."
+      },
+      "value2": {
+        "title": "Simplicity Over Complexity",
+        "description": "The best solutions are often the simplest. We don't over-engineer—we build exactly what you need, nothing more, nothing less."
+      },
+      "value3": {
+        "title": "Your Success Is Our Success",
+        "description": "We're not just vendors—we're partners. Your project's success matters to us as much as it matters to you."
+      },
+      "value4": {
+        "title": "Speed Without Sacrifice",
+        "description": "AI helps us move fast, but we never compromise on quality. Every line of code is reviewed, tested, and built to last."
+      }
+    },
+    "whyNow": {
+      "title": "Why Now?",
+      "description": "The timing has never been better for custom software development.",
+      "reason1": {
+        "title": "AI-Powered Development",
+        "description": "Modern AI tools accelerate development without compromising quality, making custom software affordable for SMEs."
+      },
+      "reason2": {
+        "title": "Mature Ecosystems",
+        "description": "The JavaScript ecosystem, cloud platforms, and open-source tools have reached a level of maturity that enables rapid, reliable development."
+      },
+      "reason3": {
+        "title": "Remote-First World",
+        "description": "Businesses are more digital than ever. The need for custom digital tools has never been greater."
+      }
+    },
+    "cta": {
+      "title": "Let's Work Together",
+      "description": "Ready to build software that's truly yours? We'd love to hear about your project.",
+      "button": "Get in Touch"
+    }
   }
 }
