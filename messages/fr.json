@@ -105,7 +105,8 @@
       "errors": {
         "nameRequired": "Veuillez entrer votre nom",
         "emailInvalid": "Veuillez entrer une adresse email valide",
-        "messageRequired": "Veuillez entrer un message (au moins 10 caractères)"
+        "messageRequired": "Veuillez entrer un message (au moins 10 caractères)",
+        "serverError": "Une erreur s'est produite. Veuillez réessayer ou nous contacter directement par email."
       }
     },
     "info": {

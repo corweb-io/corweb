@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Send, Loader2, CheckCircle2 } from "lucide-react";
+import { Send, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -14,6 +14,7 @@ export function ContactForm() {
   const t = useTranslations("contactPage.form");
   const [formState, setFormState] = useState<FormState>("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [apiError, setApiError] = useState<string | null>(null);
 
   const validateForm = (formData: FormData): boolean => {
     const newErrors: Record<string, string> = {};
@@ -47,11 +48,34 @@ export function ContactForm() {
     }
 
     setFormState("submitting");
+    setApiError(null);
 
-    // Simulate form submission (replace with actual API call later)
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          company: formData.get("company") || undefined,
+          message: formData.get("message"),
+        }),
+      });
 
-    setFormState("success");
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || "Failed to send message");
+      }
+
+      setFormState("success");
+    } catch (error) {
+      console.error("Contact form error:", error);
+      setApiError(t("errors.serverError"));
+      setFormState("error");
+    }
   };
 
   if (formState === "success") {
@@ -132,6 +156,14 @@ export function ContactForm() {
           <p className="text-sm text-destructive">{errors.message}</p>
         )}
       </div>
+
+      {/* Error Message */}
+      {formState === "error" && apiError && (
+        <div className="p-4 rounded-lg bg-destructive/10 border border-destructive/30 flex items-center gap-3">
+          <AlertCircle className="w-5 h-5 text-destructive shrink-0" />
+          <p className="text-sm text-destructive">{apiError}</p>
+        </div>
+      )}
 
       {/* Submit Button */}
       <Button
