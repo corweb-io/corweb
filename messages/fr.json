@@ -1,0 +1,85 @@
+{
+  "common": {
+    "getInTouch": "Nous Contacter",
+    "viewOurWork": "Voir Nos Réalisations",
+    "startYourProject": "Démarrer Votre Projet",
+    "allRightsReserved": "Tous droits réservés.",
+    "buildingTheFuture": "$ construire_le_futur",
+    "learnMore": "En Savoir Plus"
+  },
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "À Propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "logiciel-sur-mesure-pme",
+    "title1": "Le sur-mesure,",
+    "titleHighlight1": "enfin",
+    "title2": "accessible à",
+    "titleHighlight2": "votre entreprise",
+    "description": "Le développement accéléré par l'IA rend le logiciel sur-mesure viable pour les PME. Possédez vos outils, abandonnez les abonnements, et obtenez des solutions conçues exactement pour votre façon de travailler."
+  },
+  "mission": {
+    "badge": "pourquoi-maintenant",
+    "title": "Les Règles Ont Changé",
+    "description": "Ce qui coûtait plus de 100 000 € et prenait des mois est désormais réalisable pour une fraction du coût. Le développement assisté par IA a démocratisé le logiciel sur-mesure—en faisant un investissement intelligent pour les PME, pas seulement les grandes entreprises.",
+    "benefit1Title": "Possédez Vos Outils",
+    "benefit1Description": "Fini les frais SaaS mensuels qui s'accumulent. Vous possédez le code, les données et l'avenir de votre logiciel.",
+    "benefit2Title": "Conçu Pour Vous",
+    "benefit2Description": "Oubliez les solutions génériques. Obtenez un logiciel adapté à vos processus et besoins métier exacts.",
+    "benefit3Title": "Livraison Rapide",
+    "benefit3Description": "Le développement accéléré par l'IA nous permet de livrer en semaines, pas en mois. Vos idées deviennent réalité plus vite."
+  },
+  "services": {
+    "badge": "ce-que-nous-construisons",
+    "title": "Des Solutions Qui S'adaptent",
+    "description": "Des applications web grand public aux outils internes, nous construisons des logiciels qui fonctionnent comme votre entreprise fonctionne.",
+    "webAppsTitle": "Applications Web",
+    "webAppsDescription": "Applications web modernes et réactives construites avec des technologies de pointe pour la performance et l'évolutivité.",
+    "mobileAppsTitle": "Applications Mobiles",
+    "mobileAppsDescription": "Applications mobiles natives et multiplateformes que vos clients adoreront utiliser.",
+    "customToolsTitle": "Outils Sur-Mesure",
+    "customToolsDescription": "Tableaux de bord internes, outils d'automatisation et logiciels métier adaptés à vos opérations.",
+    "apiIntegrationsTitle": "Intégrations API",
+    "apiIntegrationsDescription": "Connectez vos systèmes de manière transparente. Nous créons des intégrations qui font fonctionner vos outils ensemble."
+  },
+  "process": {
+    "badge": "comment-ca-marche",
+    "title": "De l'Idée au Lancement",
+    "description": "Un processus rationalisé conçu pour la rapidité sans sacrifier la qualité. Nous vous impliquons à chaque étape.",
+    "step1Title": "Découverte",
+    "step1Description": "Nous apprenons votre métier, comprenons vos besoins et définissons le périmètre de votre projet.",
+    "step2Title": "Conception",
+    "step2Description": "Nous planifions l'architecture, concevons l'interface et cartographions chaque fonctionnalité.",
+    "step3Title": "Développement",
+    "step3Description": "Développement rapide accéléré par l'IA avec des points réguliers et des démos.",
+    "step4Title": "Lancement",
+    "step4Description": "Nous déployons votre logiciel, formons votre équipe et assurons un support continu."
+  },
+  "portfolio": {
+    "badge": "nos-realisations",
+    "title": "Projets en Cours",
+    "description": "Nous construisons actuellement des projets passionnants pour nos premiers clients. Bientôt, vous verrez ici des résultats concrets.",
+    "projectPlaceholder": "Bientôt disponible...",
+    "earlyBirdMessage": "Vous voulez être parmi nos premiers clients ? Les adopteurs précoces bénéficient d'une attention prioritaire et de tarifs spéciaux.",
+    "cta": "Devenir un Premier Client"
+  },
+  "cta": {
+    "badge": "parlons-en",
+    "title": "Prêt à Posséder Votre Logiciel ?",
+    "description": "Arrêtez de louer des solutions qui ne conviennent pas tout à fait. Construisons ensemble quelque chose qui est vraiment à vous—conçu pour votre entreprise, vous appartenant, pour toujours.",
+    "primaryButton": "Démarrer la Conversation"
+  },
+  "metadata": {
+    "title": "Corweb",
+    "description": "Développement de logiciels sur-mesure pour les petites et moyennes entreprises"
+  },
+  "languageSwitcher": {
+    "label": "Langue",
+    "en": "English",
+    "fr": "Français"
+  }
+}

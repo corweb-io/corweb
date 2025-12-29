@@ -1,0 +1,124 @@
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { Analytics } from "@vercel/analytics/react";
+import { ThemeProvider } from "@/components/providers";
+import { siteConfig } from "@/lib/constants";
+import { routing } from "@/i18n/routing";
+import "../globals.css";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  const messages = (await import(`../../messages/${locale}.json`)).default;
+  const t = messages.metadata;
+
+  return {
+    title: {
+      default: t.title || siteConfig.name,
+      template: `%s | ${t.title || siteConfig.name}`,
+    },
+    description: t.description || siteConfig.description,
+    keywords: [
+      "web development",
+      "mobile development",
+      "software agency",
+      "Corweb",
+      "app development",
+      "custom software",
+    ],
+    authors: [{ name: "Corweb" }],
+    creator: "Corweb",
+    metadataBase: new URL(siteConfig.url),
+    openGraph: {
+      type: "website",
+      locale: locale === "fr" ? "fr_FR" : "en_US",
+      url: siteConfig.url,
+      title: t.title || siteConfig.name,
+      description: t.description || siteConfig.description,
+      siteName: t.title || siteConfig.name,
+      images: [
+        {
+          url: siteConfig.ogImage,
+          width: 1200,
+          height: 630,
+          alt: t.title || siteConfig.name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t.title || siteConfig.name,
+      description: t.description || siteConfig.description,
+      images: [siteConfig.ogImage],
+      creator: "@corweb",
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+  };
+}
+
+export default async function LocaleLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  // Validate locale
+  if (!routing.locales.includes(locale as "en" | "fr")) {
+    notFound();
+  }
+
+  // Enable static rendering
+  setRequestLocale(locale);
+
+  // Provide messages to client components
+  const messages = await getMessages();
+
+  return (
+    <html lang={locale} suppressHydrationWarning>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+      >
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+        </ThemeProvider>
+        <Analytics />
+      </body>
+    </html>
+  );
+}

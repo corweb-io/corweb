@@ -1,0 +1,85 @@
+{
+  "common": {
+    "getInTouch": "Get in Touch",
+    "viewOurWork": "View Our Work",
+    "startYourProject": "Start Your Project",
+    "allRightsReserved": "All rights reserved.",
+    "buildingTheFuture": "$ building_the_future",
+    "learnMore": "Learn More"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "custom-software-for-smes",
+    "title1": "Custom software,",
+    "titleHighlight1": "finally",
+    "title2": "accessible to",
+    "titleHighlight2": "your business",
+    "description": "AI-accelerated development makes custom software viable for small and medium businesses. Own your tools, ditch the subscriptions, and get solutions built exactly for how you work."
+  },
+  "mission": {
+    "badge": "why-now",
+    "title": "The Rules Have Changed",
+    "description": "What used to cost €100K+ and take months is now achievable at a fraction of the cost. AI-powered development has democratized custom software—making it a smart investment for SMEs, not just enterprises.",
+    "benefit1Title": "Own Your Tools",
+    "benefit1Description": "No more monthly SaaS fees adding up. You own the code, the data, and the future of your software.",
+    "benefit2Title": "Built for You",
+    "benefit2Description": "Forget one-size-fits-all. Get software tailored to your exact workflows and business needs.",
+    "benefit3Title": "Ship Fast",
+    "benefit3Description": "AI-accelerated development means we deliver in weeks, not months. Your ideas become reality faster."
+  },
+  "services": {
+    "badge": "what-we-build",
+    "title": "Solutions That Fit",
+    "description": "From customer-facing web apps to internal tools, we build software that works the way your business works.",
+    "webAppsTitle": "Web Applications",
+    "webAppsDescription": "Modern, responsive web apps built with cutting-edge technologies for performance and scalability.",
+    "mobileAppsTitle": "Mobile Apps",
+    "mobileAppsDescription": "Native and cross-platform mobile applications that your customers will love to use.",
+    "customToolsTitle": "Custom Tools",
+    "customToolsDescription": "Internal dashboards, automation tools, and business software tailored to your operations.",
+    "apiIntegrationsTitle": "API Integrations",
+    "apiIntegrationsDescription": "Connect your systems seamlessly. We build integrations that make your tools work together."
+  },
+  "process": {
+    "badge": "how-it-works",
+    "title": "From Idea to Launch",
+    "description": "A streamlined process designed for speed without sacrificing quality. We keep you involved at every step.",
+    "step1Title": "Discovery",
+    "step1Description": "We learn your business, understand your needs, and define the scope of your project.",
+    "step2Title": "Design",
+    "step2Description": "We plan the architecture, design the interface, and map out every feature.",
+    "step3Title": "Build",
+    "step3Description": "Rapid, AI-accelerated development with regular check-ins and demos.",
+    "step4Title": "Launch",
+    "step4Description": "We deploy your software, train your team, and provide ongoing support."
+  },
+  "portfolio": {
+    "badge": "our-work",
+    "title": "Projects in Progress",
+    "description": "We're currently building exciting projects for our first clients. Soon, you'll see real results here.",
+    "projectPlaceholder": "Coming soon...",
+    "earlyBirdMessage": "Want to be one of our first clients? Early adopters get priority attention and special rates.",
+    "cta": "Become an Early Client"
+  },
+  "cta": {
+    "badge": "lets-talk",
+    "title": "Ready to Own Your Software?",
+    "description": "Stop renting solutions that don't quite fit. Let's build something that's truly yours—designed for your business, owned by you, forever.",
+    "primaryButton": "Start the Conversation"
+  },
+  "metadata": {
+    "title": "Corweb",
+    "description": "Custom software development for small and medium businesses"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "en": "English",
+    "fr": "Français"
+  }
+}
