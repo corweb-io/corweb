@@ -12,6 +12,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import { LanguageSwitcher } from "@/components/ui/language-switcher";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Menu } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -81,6 +83,10 @@ export function MobileNav() {
                 </motion.div>
               ))}
           </AnimatePresence>
+          <div className="flex items-center gap-3 pt-4 border-t border-border">
+            <LanguageSwitcher />
+            <ThemeToggle />
+          </div>
         </nav>
       </SheetContent>
     </Sheet>
