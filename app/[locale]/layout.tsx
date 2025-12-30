@@ -115,7 +115,7 @@ export default async function LocaleLayout({
         : "Custom software development for small and medium businesses",
     contactPoint: {
       "@type": "ContactPoint",
-      email: "hello@corweb.com",
+      email: "hello@corweb.io",
       contactType: "customer service",
       availableLanguage: ["English", "French"],
     },

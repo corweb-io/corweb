@@ -3,7 +3,7 @@
 export const siteConfig = {
   name: "Corweb",
   description: "Web and mobile software development agency",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://corweb.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://corweb.io",
   ogImage: "/og-image.jpg",
   links: {
     github: "https://github.com/corweb-io",

@@ -314,7 +314,7 @@
       },
       "contact": {
         "title": "7. Contact Us",
-        "content": "For any privacy-related questions or to exercise your rights, contact us at:\nEmail: hello@corweb.com"
+        "content": "For any privacy-related questions or to exercise your rights, contact us at:\nEmail: hello@corweb.io"
       }
     }
   },
@@ -326,7 +326,7 @@
     "sections": {
       "publisher": {
         "title": "1. Website Publisher",
-        "content": "Corweb\nEmail: hello@corweb.com\nWebsite: https://corweb.com"
+        "content": "Corweb\nEmail: hello@corweb.io\nWebsite: https://corweb.io"
       },
       "hosting": {
         "title": "2. Hosting",

@@ -44,8 +44,8 @@ function ContactUI() {
     {
       icon: Mail,
       label: t("info.emailLabel"),
-      value: "hello@corweb.com",
-      href: "mailto:hello@corweb.com",
+      value: "hello@corweb.io",
+      href: "mailto:hello@corweb.io",
     },
     {
       icon: MapPin,

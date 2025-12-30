@@ -314,7 +314,7 @@
       },
       "contact": {
         "title": "7. Nous Contacter",
-        "content": "Pour toute question relative à la confidentialité ou pour exercer vos droits, contactez-nous à :\nEmail : hello@corweb.com"
+        "content": "Pour toute question relative à la confidentialité ou pour exercer vos droits, contactez-nous à :\nEmail : hello@corweb.io"
       }
     }
   },
@@ -326,7 +326,7 @@
     "sections": {
       "publisher": {
         "title": "1. Éditeur du Site",
-        "content": "Corweb\nEmail : hello@corweb.com\nSite web : https://corweb.com"
+        "content": "Corweb\nEmail : hello@corweb.io\nSite web : https://corweb.io"
       },
       "hosting": {
         "title": "2. Hébergement",

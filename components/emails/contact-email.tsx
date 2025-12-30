@@ -59,7 +59,7 @@ export function ContactEmail({
           <Hr style={hr} />
 
           <Text style={footer}>
-            This email was sent from the contact form on corweb.com
+            This email was sent from the contact form on corweb.io
           </Text>
         </Container>
       </Body>
