@@ -5,6 +5,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/providers";
+import { CookieBanner } from "@/components/ui/cookie-banner";
 import { siteConfig } from "@/lib/constants";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
@@ -107,14 +108,47 @@ export default async function LocaleLayout({
   // Provide messages to client components
   const messages = await getMessages();
 
+  // JSON-LD structured data for Organization
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Corweb",
+    url: siteConfig.url,
+    logo: `${siteConfig.url}/logo.png`,
+    description:
+      locale === "fr"
+        ? "Développement de logiciels sur-mesure pour les PME"
+        : "Custom software development for small and medium businesses",
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "hello@corweb.com",
+      contactType: "customer service",
+      availableLanguage: ["English", "French"],
+    },
+    sameAs: [
+      siteConfig.links.twitter,
+      siteConfig.links.linkedin,
+      siteConfig.links.github,
+    ].filter(Boolean),
+  };
+
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
             {children}
+            <CookieBanner />
           </NextIntlClientProvider>
         </ThemeProvider>
         <Analytics />

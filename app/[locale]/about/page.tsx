@@ -10,8 +10,9 @@ import {
   Globe,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Header, Footer } from "@/components/layout";
+import { BreadcrumbSchema } from "@/components/seo";
 
 export default function AboutPage({
   params,
@@ -29,7 +30,20 @@ async function AboutContent({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <AboutUI />;
+  const t = await getTranslations("nav");
+
+  return (
+    <>
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: t("home"), href: "" },
+          { name: t("about"), href: "/about" },
+        ]}
+      />
+      <AboutUI />
+    </>
+  );
 }
 
 function AboutUI() {

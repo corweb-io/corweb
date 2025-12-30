@@ -3,7 +3,15 @@ import { siteConfig } from "@/lib/constants";
 import { routing } from "@/i18n/routing";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/services", "/portfolio", "/about", "/contact"];
+  const routes = [
+    "",
+    "/services",
+    "/portfolio",
+    "/about",
+    "/contact",
+    "/privacy",
+    "/legal",
+  ];
   const locales = routing.locales;
 
   const sitemapEntries: MetadataRoute.Sitemap = [];

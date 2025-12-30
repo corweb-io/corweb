@@ -63,12 +63,29 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
+        {/* Legal links and Copyright */}
         <div className="mt-8 pt-8 border-t border-border">
-          <p className="text-center text-xs text-muted-foreground font-mono">
-            &copy; {new Date().getFullYear()} {siteConfig.name}.{" "}
-            {t("common.allRightsReserved")}
-          </p>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-4 text-xs text-muted-foreground">
+              <Link
+                href="/privacy"
+                className="hover:text-primary transition-colors"
+              >
+                {t("footer.privacy")}
+              </Link>
+              <span className="text-border">|</span>
+              <Link
+                href="/legal"
+                className="hover:text-primary transition-colors"
+              >
+                {t("footer.legal")}
+              </Link>
+            </div>
+            <p className="text-center text-xs text-muted-foreground font-mono">
+              &copy; {new Date().getFullYear()} {siteConfig.name}.{" "}
+              {t("common.allRightsReserved")}
+            </p>
+          </div>
         </div>
       </div>
     </footer>

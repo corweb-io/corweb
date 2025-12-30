@@ -7,6 +7,10 @@
     "buildingTheFuture": "$ building_the_future",
     "learnMore": "Learn More"
   },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "legal": "Legal Notice"
+  },
   "nav": {
     "home": "Home",
     "services": "Services",
@@ -276,5 +280,80 @@
       "description": "Ready to build software that's truly yours? We'd love to hear about your project.",
       "button": "Get in Touch"
     }
+  },
+  "privacyPage": {
+    "badge": "privacy",
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated",
+    "lastUpdatedDate": "December 2024",
+    "intro": "At Corweb, we are committed to protecting your privacy. This policy explains how we collect, use, and protect your personal data in accordance with the General Data Protection Regulation (GDPR).",
+    "sections": {
+      "dataCollection": {
+        "title": "1. Data We Collect",
+        "content": "We collect the following personal data when you use our contact form:\n• Name\n• Email address\n• Company name (optional)\n• Message content\n\nWe also collect anonymous analytics data through Vercel Analytics to understand how visitors use our website."
+      },
+      "dataUse": {
+        "title": "2. How We Use Your Data",
+        "content": "We use your personal data solely to:\n• Respond to your inquiries\n• Provide information about our services\n• Send project proposals when requested\n\nWe do not use your data for marketing purposes without your explicit consent."
+      },
+      "dataStorage": {
+        "title": "3. Data Storage and Security",
+        "content": "Your data is processed through Resend (email service) and may be stored in our email systems. We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, or destruction."
+      },
+      "cookies": {
+        "title": "4. Cookies",
+        "content": "We use essential cookies for website functionality and anonymous analytics cookies (Vercel Analytics) to understand site usage. You can manage your cookie preferences at any time."
+      },
+      "thirdParties": {
+        "title": "5. Third-Party Services",
+        "content": "We use the following third-party services:\n• Vercel: Website hosting and analytics\n• Resend: Email delivery\n\nThese services have their own privacy policies and comply with GDPR requirements."
+      },
+      "rights": {
+        "title": "6. Your Rights",
+        "content": "Under GDPR, you have the right to:\n• Access your personal data\n• Rectify inaccurate data\n• Request deletion of your data\n• Object to data processing\n• Data portability\n\nTo exercise these rights, please contact us using the details below."
+      },
+      "contact": {
+        "title": "7. Contact Us",
+        "content": "For any privacy-related questions or to exercise your rights, contact us at:\nEmail: hello@corweb.com"
+      }
+    }
+  },
+  "legalPage": {
+    "badge": "legal-notice",
+    "title": "Legal Notice",
+    "lastUpdated": "Last updated",
+    "lastUpdatedDate": "December 2024",
+    "sections": {
+      "publisher": {
+        "title": "1. Website Publisher",
+        "content": "Corweb\nEmail: hello@corweb.com\nWebsite: https://corweb.com"
+      },
+      "hosting": {
+        "title": "2. Hosting",
+        "content": "This website is hosted by:\nVercel Inc.\n440 N Barranca Ave #4133\nCovina, CA 91723\nUnited States\nhttps://vercel.com"
+      },
+      "intellectual": {
+        "title": "3. Intellectual Property",
+        "content": "All content on this website (texts, images, logos, graphics) is the property of Corweb and is protected by intellectual property laws. Any reproduction, distribution, or use without prior written authorization is prohibited."
+      },
+      "liability": {
+        "title": "4. Limitation of Liability",
+        "content": "Corweb strives to provide accurate and up-to-date information on this website. However, we cannot guarantee the accuracy, completeness, or timeliness of the information provided. Corweb shall not be liable for any direct or indirect damages resulting from the use of this website."
+      },
+      "links": {
+        "title": "5. External Links",
+        "content": "This website may contain links to external websites. Corweb has no control over the content of these sites and accepts no responsibility for their content or privacy practices."
+      },
+      "law": {
+        "title": "6. Applicable Law",
+        "content": "This legal notice is governed by French law. Any disputes arising from the use of this website shall be subject to the exclusive jurisdiction of the French courts."
+      }
+    }
+  },
+  "cookies": {
+    "message": "We use cookies to improve your experience and analyze site traffic.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "learnMore": "Learn more"
   }
 }

@@ -7,6 +7,10 @@
     "buildingTheFuture": "$ construire_le_futur",
     "learnMore": "En Savoir Plus"
   },
+  "footer": {
+    "privacy": "Politique de Confidentialité",
+    "legal": "Mentions Légales"
+  },
   "nav": {
     "home": "Accueil",
     "services": "Services",
@@ -276,5 +280,80 @@
       "description": "Prêt à construire un logiciel qui est vraiment le vôtre ? Nous serions ravis d'en apprendre plus sur votre projet.",
       "button": "Nous Contacter"
     }
+  },
+  "privacyPage": {
+    "badge": "confidentialite",
+    "title": "Politique de Confidentialité",
+    "lastUpdated": "Dernière mise à jour",
+    "lastUpdatedDate": "Décembre 2024",
+    "intro": "Chez Corweb, nous nous engageons à protéger votre vie privée. Cette politique explique comment nous collectons, utilisons et protégeons vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD).",
+    "sections": {
+      "dataCollection": {
+        "title": "1. Données Collectées",
+        "content": "Nous collectons les données personnelles suivantes lorsque vous utilisez notre formulaire de contact :\n• Nom\n• Adresse email\n• Nom de l'entreprise (optionnel)\n• Contenu du message\n\nNous collectons également des données analytiques anonymes via Vercel Analytics pour comprendre comment les visiteurs utilisent notre site."
+      },
+      "dataUse": {
+        "title": "2. Utilisation de Vos Données",
+        "content": "Nous utilisons vos données personnelles uniquement pour :\n• Répondre à vos demandes\n• Fournir des informations sur nos services\n• Envoyer des propositions de projet sur demande\n\nNous n'utilisons pas vos données à des fins marketing sans votre consentement explicite."
+      },
+      "dataStorage": {
+        "title": "3. Stockage et Sécurité des Données",
+        "content": "Vos données sont traitées via Resend (service email) et peuvent être stockées dans nos systèmes de messagerie. Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre tout accès, modification ou destruction non autorisés."
+      },
+      "cookies": {
+        "title": "4. Cookies",
+        "content": "Nous utilisons des cookies essentiels pour le fonctionnement du site et des cookies analytiques anonymes (Vercel Analytics) pour comprendre l'utilisation du site. Vous pouvez gérer vos préférences de cookies à tout moment."
+      },
+      "thirdParties": {
+        "title": "5. Services Tiers",
+        "content": "Nous utilisons les services tiers suivants :\n• Vercel : Hébergement et analytics\n• Resend : Envoi d'emails\n\nCes services ont leurs propres politiques de confidentialité et sont conformes aux exigences du RGPD."
+      },
+      "rights": {
+        "title": "6. Vos Droits",
+        "content": "En vertu du RGPD, vous avez le droit de :\n• Accéder à vos données personnelles\n• Rectifier les données inexactes\n• Demander la suppression de vos données\n• Vous opposer au traitement des données\n• Portabilité des données\n\nPour exercer ces droits, veuillez nous contacter aux coordonnées ci-dessous."
+      },
+      "contact": {
+        "title": "7. Nous Contacter",
+        "content": "Pour toute question relative à la confidentialité ou pour exercer vos droits, contactez-nous à :\nEmail : hello@corweb.com"
+      }
+    }
+  },
+  "legalPage": {
+    "badge": "mentions-legales",
+    "title": "Mentions Légales",
+    "lastUpdated": "Dernière mise à jour",
+    "lastUpdatedDate": "Décembre 2024",
+    "sections": {
+      "publisher": {
+        "title": "1. Éditeur du Site",
+        "content": "Corweb\nEmail : hello@corweb.com\nSite web : https://corweb.com"
+      },
+      "hosting": {
+        "title": "2. Hébergement",
+        "content": "Ce site est hébergé par :\nVercel Inc.\n440 N Barranca Ave #4133\nCovina, CA 91723\nÉtats-Unis\nhttps://vercel.com"
+      },
+      "intellectual": {
+        "title": "3. Propriété Intellectuelle",
+        "content": "Tout le contenu de ce site (textes, images, logos, graphiques) est la propriété de Corweb et est protégé par les lois sur la propriété intellectuelle. Toute reproduction, distribution ou utilisation sans autorisation écrite préalable est interdite."
+      },
+      "liability": {
+        "title": "4. Limitation de Responsabilité",
+        "content": "Corweb s'efforce de fournir des informations exactes et à jour sur ce site. Cependant, nous ne pouvons garantir l'exactitude, l'exhaustivité ou l'actualité des informations fournies. Corweb ne saurait être tenu responsable des dommages directs ou indirects résultant de l'utilisation de ce site."
+      },
+      "links": {
+        "title": "5. Liens Externes",
+        "content": "Ce site peut contenir des liens vers des sites externes. Corweb n'a aucun contrôle sur le contenu de ces sites et n'accepte aucune responsabilité quant à leur contenu ou leurs pratiques de confidentialité."
+      },
+      "law": {
+        "title": "6. Droit Applicable",
+        "content": "Ces mentions légales sont régies par le droit français. Tout litige découlant de l'utilisation de ce site sera soumis à la compétence exclusive des tribunaux français."
+      }
+    }
+  },
+  "cookies": {
+    "message": "Nous utilisons des cookies pour améliorer votre expérience et analyser le trafic du site.",
+    "accept": "Accepter",
+    "decline": "Refuser",
+    "learnMore": "En savoir plus"
   }
 }

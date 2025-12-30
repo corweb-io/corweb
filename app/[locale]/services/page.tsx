@@ -13,8 +13,9 @@ import {
   Layers,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Header, Footer } from "@/components/layout";
+import { BreadcrumbSchema, ServiceSchema } from "@/components/seo";
 
 export default function ServicesPage({
   params,
@@ -32,7 +33,21 @@ async function ServicesContent({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <ServicesUI />;
+  const t = await getTranslations("nav");
+
+  return (
+    <>
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: t("home"), href: "" },
+          { name: t("services"), href: "/services" },
+        ]}
+      />
+      <ServiceSchema locale={locale} />
+      <ServicesUI />
+    </>
+  );
 }
 
 function ServicesUI() {

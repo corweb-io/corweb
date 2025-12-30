@@ -1,8 +1,9 @@
 import { Mail, MapPin, Clock, MessageSquare } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Header, Footer } from "@/components/layout";
 import { ContactForm } from "@/components/forms/contact-form";
+import { BreadcrumbSchema } from "@/components/seo";
 
 export default function ContactPage({
   params,
@@ -20,7 +21,20 @@ async function ContactContent({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <ContactUI />;
+  const t = await getTranslations("nav");
+
+  return (
+    <>
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: t("home"), href: "" },
+          { name: t("contact"), href: "/contact" },
+        ]}
+      />
+      <ContactUI />
+    </>
+  );
 }
 
 function ContactUI() {
