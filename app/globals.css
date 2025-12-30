@@ -38,10 +38,52 @@
 }
 
 @theme inline {
-  --animate-in: enter 0.2s ease-out;
-  --animate-out: exit 0.2s ease-in;
+  --animate-in: enter 0.3s ease-out forwards;
+  --animate-out: exit 0.25s ease-in forwards;
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+/* Fade animation utilities */
+@utility fade-in-0 {
+  --tw-enter-opacity: 0;
+}
+
+@utility fade-out-0 {
+  --tw-exit-opacity: 0;
+}
+
+/* Slide animation utilities */
+@utility slide-in-from-right {
+  --tw-enter-translate-x: 100%;
+}
+
+@utility slide-out-to-right {
+  --tw-exit-translate-x: 100%;
+}
+
+@utility slide-in-from-left {
+  --tw-enter-translate-x: -100%;
+}
+
+@utility slide-out-to-left {
+  --tw-exit-translate-x: -100%;
+}
+
+@utility slide-in-from-top {
+  --tw-enter-translate-y: -100%;
+}
+
+@utility slide-out-to-top {
+  --tw-exit-translate-y: -100%;
+}
+
+@utility slide-in-from-bottom {
+  --tw-enter-translate-y: 100%;
+}
+
+@utility slide-out-to-bottom {
+  --tw-exit-translate-y: 100%;
 }
 
 @keyframes accordion-down {
