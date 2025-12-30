@@ -9,7 +9,7 @@ export function GoBackButton() {
   return (
     <button
       onClick={() => window.history.back()}
-      className="inline-flex items-center gap-2 px-6 py-3 font-semibold rounded-lg transition-all bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border"
+      className="inline-flex items-center gap-2 px-6 py-3 font-semibold rounded-lg transition-all bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border cursor-pointer"
     >
       <ArrowLeft className="w-4 h-4" />
       {t("goBack")}

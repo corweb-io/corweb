@@ -209,7 +209,7 @@ function PortfolioUI() {
                 </p>
                 <a
                   href="/contact"
-                  className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25"
+                  className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25 cursor-pointer"
                 >
                   {t("cta.button")}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

@@ -18,7 +18,7 @@ export function LanguageSwitcher() {
   return (
     <div className="relative group">
       <button
-        className="w-9 h-9 rounded-lg bg-secondary border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
+        className="w-9 h-9 rounded-lg bg-secondary border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors cursor-pointer"
         aria-label={t("label")}
       >
         <Globe className="w-4 h-4" />
@@ -28,7 +28,7 @@ export function LanguageSwitcher() {
           <button
             key={loc}
             onClick={() => handleLocaleChange(loc)}
-            className={`w-full px-3 py-1.5 text-left text-sm hover:bg-accent transition-colors ${
+            className={`w-full px-3 py-1.5 text-left text-sm hover:bg-accent transition-colors cursor-pointer ${
               locale === loc
                 ? "text-primary font-medium"
                 : "text-muted-foreground"

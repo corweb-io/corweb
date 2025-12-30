@@ -74,7 +74,7 @@ export function Header() {
           <ThemeToggle />
           <Link
             href="/contact"
-            className="hidden md:inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-lg transition-all hover:bg-primary/90"
+            className="hidden md:inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-lg transition-all hover:bg-primary/90 cursor-pointer"
           >
             {t("common.getInTouch")}
           </Link>

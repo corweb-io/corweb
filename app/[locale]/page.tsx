@@ -165,7 +165,7 @@ async function build(vision) {
                 <div className="flex flex-wrap gap-4">
                   <a
                     href="/contact"
-                    className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25"
+                    className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25 cursor-pointer"
                   >
                     <span className="font-mono text-sm">$</span>
                     {t("common.startYourProject")}
@@ -173,7 +173,7 @@ async function build(vision) {
                   </a>
                   <a
                     href="#services"
-                    className="inline-flex items-center gap-2 px-6 py-3 font-semibold rounded-lg transition-all bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border"
+                    className="inline-flex items-center gap-2 px-6 py-3 font-semibold rounded-lg transition-all bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border cursor-pointer"
                   >
                     {t("common.learnMore")}
                   </a>
@@ -387,7 +387,7 @@ const portfolio = await
               <div className="flex flex-wrap justify-center gap-4">
                 <a
                   href="/contact"
-                  className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25"
+                  className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25 cursor-pointer"
                 >
                   <span className="font-mono text-sm">$</span>
                   {t("cta.primaryButton")}
