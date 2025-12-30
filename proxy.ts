@@ -8,6 +8,6 @@ export const config = {
   // - API routes
   // - Next.js internals
   // - Static files
-  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
+  // - .well-known routes (used for various web standards)
+  matcher: ["/((?!api|_next|_vercel|\\.well-known|.*\\..*).*)"],
 };
-

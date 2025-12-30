@@ -33,6 +33,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
 
+  // Validate locale before importing messages
+  if (!routing.locales.includes(locale as "en" | "fr")) {
+    // Return default metadata for invalid locales
+    return {
+      title: siteConfig.name,
+      description: siteConfig.description,
+    };
+  }
+
   const messages = (await import(`../../messages/${locale}.json`)).default;
   const t = messages.metadata;
 
