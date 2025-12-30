@@ -15,6 +15,7 @@ import {
   Clock,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Header, Footer } from "@/components/layout";
 import {
   FadeInUp,
@@ -102,7 +103,7 @@ function HomeUI() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="relative min-h-[85vh] flex items-center overflow-hidden">
           {/* Background Elements */}
@@ -163,14 +164,14 @@ async function build(vision) {
               {/* CTAs */}
               <FadeInUp delay={0.2}>
                 <div className="flex flex-wrap gap-4">
-                  <a
+                  <Link
                     href="/contact"
                     className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25 cursor-pointer"
                   >
                     <span className="font-mono text-sm">$</span>
                     {t("common.startYourProject")}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </a>
+                  </Link>
                   <a
                     href="#services"
                     className="inline-flex items-center gap-2 px-6 py-3 font-semibold rounded-lg transition-all bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border cursor-pointer"
@@ -357,13 +358,13 @@ const portfolio = await
                 <p className="text-sm text-muted-foreground mb-6">
                   {t("portfolio.earlyBirdMessage")}
                 </p>
-                <a
+                <Link
                   href="/contact"
                   className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25"
                 >
                   {t("portfolio.cta")}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -385,14 +386,14 @@ const portfolio = await
                 {t("cta.description")}
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <a
+                <Link
                   href="/contact"
                   className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25 cursor-pointer"
                 >
                   <span className="font-mono text-sm">$</span>
                   {t("cta.primaryButton")}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {
   Folder,
   Code2,
@@ -10,8 +11,32 @@ import {
   Star,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { Header, Footer } from "@/components/layout";
+import { BreadcrumbSchema } from "@/components/seo";
+import { siteConfig } from "@/lib/constants";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "portfolioPage" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: {
+      canonical: `${siteConfig.url}/${locale}/portfolio`,
+      languages: {
+        en: `${siteConfig.url}/en/portfolio`,
+        fr: `${siteConfig.url}/fr/portfolio`,
+      },
+    },
+  };
+}
 
 export default function PortfolioPage({
   params,
@@ -29,7 +54,20 @@ async function PortfolioContent({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <PortfolioUI />;
+  const t = await getTranslations("nav");
+
+  return (
+    <>
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: t("home"), href: "" },
+          { name: t("portfolio"), href: "/portfolio" },
+        ]}
+      />
+      <PortfolioUI />
+    </>
+  );
 }
 
 function PortfolioUI() {
@@ -64,7 +102,7 @@ function PortfolioUI() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="relative py-20 md:py-28 overflow-hidden">
           {/* Background Elements */}
@@ -207,13 +245,13 @@ function PortfolioUI() {
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                   {t("cta.description")}
                 </p>
-                <a
+                <Link
                   href="/contact"
                   className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25 cursor-pointer"
                 >
                   {t("cta.button")}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

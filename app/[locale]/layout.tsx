@@ -3,9 +3,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/providers";
 import { CookieBanner } from "@/components/ui/cookie-banner";
+import { ConditionalAnalytics } from "@/components/ui/conditional-analytics";
+import { SkipToContent } from "@/components/ui/skip-to-content";
 import { Toaster } from "@/components/ui/toaster";
 import { siteConfig } from "@/lib/constants";
 import { routing } from "@/i18n/routing";
@@ -139,12 +140,13 @@ export default async function LocaleLayout({
       >
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
+            <SkipToContent />
             {children}
             <CookieBanner />
             <Toaster />
           </NextIntlClientProvider>
         </ThemeProvider>
-        <Analytics />
+        <ConditionalAnalytics />
       </body>
     </html>
   );

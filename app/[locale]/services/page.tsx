@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { Header, Footer } from "@/components/layout";
 import { BreadcrumbSchema, ServiceSchema } from "@/components/seo";
 
@@ -127,7 +128,7 @@ function ServicesUI() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="relative py-20 md:py-28 overflow-hidden">
           {/* Background Elements */}
@@ -267,13 +268,13 @@ function ServicesUI() {
                   {t("pricing.description")}
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <a
+                  <Link
                     href="/contact"
                     className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25"
                   >
                     {t("pricing.cta")}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

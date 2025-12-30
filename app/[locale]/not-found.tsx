@@ -11,7 +11,7 @@ export default function NotFound() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      <main className="flex-1 flex items-center justify-center">
+      <main id="main-content" className="flex-1 flex items-center justify-center">
         <section className="relative py-20 md:py-28 overflow-hidden w-full">
           {/* Background Elements */}
           <div className="absolute inset-0 overflow-hidden">

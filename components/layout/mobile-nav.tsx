@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { siteConfig } from "@/lib/constants";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetHeader,
   SheetTitle,
@@ -14,17 +15,16 @@ import {
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { Menu } from "lucide-react";
+import { Menu, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const navKeys = ["home", "services", "portfolio", "about", "contact"] as const;
+const navKeys = ["home", "services", "portfolio", "about"] as const;
 
 const navHrefs: Record<(typeof navKeys)[number], string> = {
   home: "/",
   services: "/services",
   portfolio: "/portfolio",
   about: "/about",
-  contact: "/contact",
 };
 
 const navItemVariants = {
@@ -52,9 +52,10 @@ export function MobileNav() {
           variant="ghost"
           size="icon"
           className="md:hidden cursor-pointer"
+          aria-label={t("nav.toggleMenu")}
         >
           <Menu className="h-5 w-5" />
-          <span className="sr-only">Toggle menu</span>
+          <span className="sr-only">{t("nav.toggleMenu")}</span>
         </Button>
       </SheetTrigger>
       <SheetContent side="right" className="w-[300px] sm:w-[400px] p-6">
@@ -73,16 +74,29 @@ export function MobileNav() {
                   animate="visible"
                   exit="exit"
                 >
-                  <Link
-                    href={navHrefs[key]}
-                    onClick={() => setIsOpen(false)}
-                    className="block text-lg font-medium text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {t(`nav.${key}`)}
-                  </Link>
+                  <SheetClose asChild>
+                    <Link
+                      href={navHrefs[key]}
+                      className="block text-lg font-medium text-muted-foreground transition-colors hover:text-foreground"
+                    >
+                      {t(`nav.${key}`)}
+                    </Link>
+                  </SheetClose>
                 </motion.div>
               ))}
           </AnimatePresence>
+
+          {/* CTA Button */}
+          <SheetClose asChild>
+            <Link
+              href="/contact"
+              className="group inline-flex items-center justify-center gap-2 mt-4 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:bg-primary/90"
+            >
+              {t("common.getInTouch")}
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </SheetClose>
+
           <div className="flex items-center gap-3 pt-4 border-t border-border">
             <LanguageSwitcher />
             <ThemeToggle />

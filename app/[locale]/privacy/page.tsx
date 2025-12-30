@@ -1,7 +1,31 @@
+import type { Metadata } from "next";
 import { Shield } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Header, Footer } from "@/components/layout";
+import { BreadcrumbSchema } from "@/components/seo";
+import { siteConfig } from "@/lib/constants";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "privacyPage" });
+
+  return {
+    title: t("title"),
+    description: t("intro"),
+    alternates: {
+      canonical: `${siteConfig.url}/${locale}/privacy`,
+      languages: {
+        en: `${siteConfig.url}/en/privacy`,
+        fr: `${siteConfig.url}/fr/privacy`,
+      },
+    },
+  };
+}
 
 export default function PrivacyPage({
   params,
@@ -19,7 +43,20 @@ async function PrivacyContent({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <PrivacyUI />;
+  const t = await getTranslations("nav");
+
+  return (
+    <>
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: t("home"), href: "" },
+          { name: t("privacy") || "Privacy", href: "/privacy" },
+        ]}
+      />
+      <PrivacyUI />
+    </>
+  );
 }
 
 function PrivacyUI() {
@@ -60,7 +97,7 @@ function PrivacyUI() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="relative py-16 md:py-20 overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">

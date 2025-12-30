@@ -35,6 +35,7 @@ export function Footer() {
                 href={siteConfig.links.github}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={t("footer.visitGitHub")}
                 className="w-9 h-9 rounded-lg bg-secondary border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
               >
                 <Github className="w-4 h-4" />
@@ -45,6 +46,7 @@ export function Footer() {
                 href={siteConfig.links.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={t("footer.visitLinkedIn")}
                 className="w-9 h-9 rounded-lg bg-secondary border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
               >
                 <Linkedin className="w-4 h-4" />

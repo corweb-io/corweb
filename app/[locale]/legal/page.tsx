@@ -1,7 +1,34 @@
+import type { Metadata } from "next";
 import { Scale } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Header, Footer } from "@/components/layout";
+import { BreadcrumbSchema } from "@/components/seo";
+import { siteConfig } from "@/lib/constants";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "legalPage" });
+
+  return {
+    title: t("title"),
+    description:
+      locale === "fr"
+        ? "Mentions légales de Corweb"
+        : "Legal notice for Corweb",
+    alternates: {
+      canonical: `${siteConfig.url}/${locale}/legal`,
+      languages: {
+        en: `${siteConfig.url}/en/legal`,
+        fr: `${siteConfig.url}/fr/legal`,
+      },
+    },
+  };
+}
 
 export default function LegalPage({
   params,
@@ -19,7 +46,20 @@ async function LegalContent({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <LegalUI />;
+  const t = await getTranslations("nav");
+
+  return (
+    <>
+      <BreadcrumbSchema
+        locale={locale}
+        items={[
+          { name: t("home"), href: "" },
+          { name: t("legal") || "Legal", href: "/legal" },
+        ]}
+      />
+      <LegalUI />
+    </>
+  );
 }
 
 function LegalUI() {
@@ -56,7 +96,7 @@ function LegalUI() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="relative py-16 md:py-20 overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">

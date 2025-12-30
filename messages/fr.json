@@ -5,18 +5,24 @@
     "startYourProject": "Démarrer Votre Projet",
     "allRightsReserved": "Tous droits réservés.",
     "buildingTheFuture": "$ construire_le_futur",
-    "learnMore": "En Savoir Plus"
+    "learnMore": "En Savoir Plus",
+    "skipToContent": "Aller au contenu principal"
   },
   "footer": {
     "privacy": "Politique de Confidentialité",
-    "legal": "Mentions Légales"
+    "legal": "Mentions Légales",
+    "visitGitHub": "Visiter notre profil GitHub",
+    "visitLinkedIn": "Visiter notre profil LinkedIn"
   },
   "nav": {
     "home": "Accueil",
     "services": "Services",
     "portfolio": "Portfolio",
     "about": "À Propos",
-    "contact": "Contact"
+    "contact": "Contact",
+    "privacy": "Confidentialité",
+    "legal": "Mentions Légales",
+    "toggleMenu": "Ouvrir le menu"
   },
   "hero": {
     "badge": "logiciel-sur-mesure-pme",

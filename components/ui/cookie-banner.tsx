@@ -25,11 +25,15 @@ export function CookieBanner() {
   const handleAccept = () => {
     localStorage.setItem(COOKIE_CONSENT_KEY, "accepted");
     setShowBanner(false);
+    // Dispatch event to notify analytics component
+    window.dispatchEvent(new Event("cookie-consent-changed"));
   };
 
   const handleDecline = () => {
     localStorage.setItem(COOKIE_CONSENT_KEY, "declined");
     setShowBanner(false);
+    // Dispatch event to notify analytics component
+    window.dispatchEvent(new Event("cookie-consent-changed"));
   };
 
   if (!showBanner) return null;
