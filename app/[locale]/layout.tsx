@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/providers";
 import { CookieBanner } from "@/components/ui/cookie-banner";
+import { Toaster } from "@/components/ui/toaster";
 import { siteConfig } from "@/lib/constants";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
@@ -149,6 +150,7 @@ export default async function LocaleLayout({
           <NextIntlClientProvider messages={messages}>
             {children}
             <CookieBanner />
+            <Toaster />
           </NextIntlClientProvider>
         </ThemeProvider>
         <Analytics />

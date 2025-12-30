@@ -144,7 +144,9 @@ function ContactUI() {
 
                   {/* Additional Info */}
                   <div className="p-6 rounded-xl bg-primary/5 border border-primary/20">
-                    <h3 className="font-semibold mb-2">{t("whyContact.title")}</h3>
+                    <h3 className="font-semibold mb-2">
+                      {t("whyContact.title")}
+                    </h3>
                     <ul className="space-y-2 text-sm text-muted-foreground">
                       <li className="flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-primary" />
@@ -171,4 +173,3 @@ function ContactUI() {
     </div>
   );
 }
-

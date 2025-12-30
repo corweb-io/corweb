@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { toast } from "sonner";
 import { Send, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -71,10 +72,14 @@ export function ContactForm() {
       }
 
       setFormState("success");
+      toast.success(t("successTitle"), {
+        description: t("successMessage"),
+      });
     } catch (error) {
       console.error("Contact form error:", error);
       setApiError(t("errors.serverError"));
       setFormState("error");
+      toast.error(t("errors.serverError"));
     }
   };
 

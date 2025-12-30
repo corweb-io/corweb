@@ -29,4 +29,3 @@ export function BreadcrumbSchema({ items, locale }: BreadcrumbSchemaProps) {
     />
   );
 }
-

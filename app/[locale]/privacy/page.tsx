@@ -106,4 +106,3 @@ function PrivacyUI() {
     </div>
   );
 }
-

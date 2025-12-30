@@ -1,3 +1,5 @@
+"use client";
+
 import {
   ArrowRight,
   Terminal,
@@ -13,25 +15,15 @@ import {
   Clock,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
 import { Header, Footer } from "@/components/layout";
+import {
+  FadeInUp,
+  FadeIn,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/motion";
 
-export default function Home({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  return <HomeContent params={params} />;
-}
-
-async function HomeContent({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await params;
-  setRequestLocale(locale);
-
+export default function Home() {
   return <HomeUI />;
 }
 
@@ -141,7 +133,7 @@ async function build(vision) {
 
           {/* Content */}
           <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20">
-            <div className="max-w-4xl">
+            <FadeInUp className="max-w-4xl">
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-mono mb-8 bg-primary/10 text-primary border border-primary/20">
                 <Terminal className="w-4 h-4" />
@@ -169,23 +161,25 @@ async function build(vision) {
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-wrap gap-4">
-                <a
-                  href="/contact"
-                  className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25"
-                >
-                  <span className="font-mono text-sm">$</span>
-                  {t("common.startYourProject")}
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
-                <a
-                  href="#services"
-                  className="inline-flex items-center gap-2 px-6 py-3 font-semibold rounded-lg transition-all bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border"
-                >
-                  {t("common.learnMore")}
-                </a>
-              </div>
-            </div>
+              <FadeInUp delay={0.2}>
+                <div className="flex flex-wrap gap-4">
+                  <a
+                    href="/contact"
+                    className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25"
+                  >
+                    <span className="font-mono text-sm">$</span>
+                    {t("common.startYourProject")}
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                  <a
+                    href="#services"
+                    className="inline-flex items-center gap-2 px-6 py-3 font-semibold rounded-lg transition-all bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border"
+                  >
+                    {t("common.learnMore")}
+                  </a>
+                </div>
+              </FadeInUp>
+            </FadeInUp>
           </div>
         </section>
 
@@ -194,7 +188,7 @@ async function build(vision) {
           <div className="absolute inset-0 bg-linear-to-b from-transparent via-primary/5 to-transparent" />
           <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
             {/* Section Header */}
-            <div className="max-w-3xl mx-auto text-center mb-16">
+            <FadeInUp className="max-w-3xl mx-auto text-center mb-16">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono mb-6 bg-primary/10 text-primary border border-primary/20">
                 <Sparkles className="w-3 h-3" />
                 {t("mission.badge")}
@@ -205,12 +199,12 @@ async function build(vision) {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 {t("mission.description")}
               </p>
-            </div>
+            </FadeInUp>
 
             {/* Benefits Grid */}
-            <div className="grid md:grid-cols-3 gap-8">
+            <StaggerContainer className="grid md:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div
+                <StaggerItem
                   key={index}
                   className="group p-8 rounded-2xl bg-card/50 border border-border hover:border-primary/30 transition-all hover:-translate-y-1"
                 >
@@ -223,9 +217,9 @@ async function build(vision) {
                   <p className="text-muted-foreground leading-relaxed">
                     {benefit.description}
                   </p>
-                </div>
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerContainer>
           </div>
         </section>
 
@@ -233,7 +227,7 @@ async function build(vision) {
         <section id="services" className="py-24 relative">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             {/* Section Header */}
-            <div className="max-w-3xl mx-auto text-center mb-16">
+            <FadeInUp className="max-w-3xl mx-auto text-center mb-16">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono mb-6 bg-primary/10 text-primary border border-primary/20">
                 <Code2 className="w-3 h-3" />
                 {t("services.badge")}
@@ -244,7 +238,7 @@ async function build(vision) {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 {t("services.description")}
               </p>
-            </div>
+            </FadeInUp>
 
             {/* Services Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
