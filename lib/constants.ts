@@ -6,8 +6,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://corweb.com",
   ogImage: "/og-image.jpg",
   links: {
-    twitter: "https://twitter.com/corweb",
-    github: "https://github.com/corweb",
-    linkedin: "https://linkedin.com/company/corweb",
+    github: "https://github.com/corweb-io",
+    linkedin: "https://www.linkedin.com/company/corweb-io",
   },
 };

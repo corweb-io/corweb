@@ -1,6 +1,6 @@
 "use client";
 
-import { Terminal, Github, Twitter, Linkedin } from "lucide-react";
+import { Terminal, Github, Linkedin } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { siteConfig } from "@/lib/constants";
@@ -38,16 +38,6 @@ export function Footer() {
                 className="w-9 h-9 rounded-lg bg-secondary border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
               >
                 <Github className="w-4 h-4" />
-              </a>
-            )}
-            {siteConfig.links.twitter && (
-              <a
-                href={siteConfig.links.twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-secondary border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
-              >
-                <Twitter className="w-4 h-4" />
               </a>
             )}
             {siteConfig.links.linkedin && (

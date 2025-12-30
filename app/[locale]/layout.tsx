@@ -68,13 +68,6 @@ export async function generateMetadata({
         },
       ],
     },
-    twitter: {
-      card: "summary_large_image",
-      title: t.title || siteConfig.name,
-      description: t.description || siteConfig.description,
-      images: [siteConfig.ogImage],
-      creator: "@corweb",
-    },
     robots: {
       index: true,
       follow: true,
@@ -126,11 +119,9 @@ export default async function LocaleLayout({
       contactType: "customer service",
       availableLanguage: ["English", "French"],
     },
-    sameAs: [
-      siteConfig.links.twitter,
-      siteConfig.links.linkedin,
-      siteConfig.links.github,
-    ].filter(Boolean),
+    sameAs: [siteConfig.links.linkedin, siteConfig.links.github].filter(
+      Boolean
+    ),
   };
 
   return (
