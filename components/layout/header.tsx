@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Terminal } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
+import { Logo } from "@/components/ui/logo";
 import { MobileNav } from "./mobile-nav";
 import { cn } from "@/lib/utils";
 
@@ -49,14 +49,8 @@ export function Header() {
           scrolled ? "h-14" : "h-16"
         )}
       >
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-            <Terminal className="w-4 h-4 text-primary" />
-          </div>
-          <span className="font-bold text-xl">
-            <span className="text-primary">Cor</span>
-            <span className="text-foreground">web</span>
-          </span>
+        <Link href="/" className="flex items-center group">
+          <Logo width={120} height={32} />
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navKeys.map((key) => (

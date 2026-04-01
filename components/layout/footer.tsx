@@ -1,8 +1,9 @@
 "use client";
 
-import { Terminal, Github, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { Logo } from "@/components/ui/logo";
 import { siteConfig } from "@/lib/constants";
 
 export function Footer() {
@@ -14,14 +15,8 @@ export function Footer() {
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           {/* Logo and tagline */}
           <div className="flex flex-col items-center md:items-start gap-3">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
-                <Terminal className="w-3.5 h-3.5 text-primary" />
-              </div>
-              <span className="font-bold text-lg">
-                <span className="text-primary">Cor</span>
-                <span className="text-foreground">web</span>
-              </span>
+            <Link href="/" className="flex items-center">
+              <Logo width={180} height={50} />
             </Link>
             <p className="text-sm text-muted-foreground font-mono">
               {t("common.buildingTheFuture")}
