@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1584" height="396" viewBox="0 0 1584 396">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#141414"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#c4ff32" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#c4ff32" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#c4ff32" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="line-grad" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#c4ff32" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#c4ff32" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1584" height="396" fill="url(#bg)"/>
+
+  <!-- Subtle grid dots -->
+  <g fill="#c4ff32" opacity="0.06">
+    <circle cx="80" cy="40" r="1.5"/>
+    <circle cx="160" cy="40" r="1.5"/>
+    <circle cx="240" cy="40" r="1.5"/>
+    <circle cx="320" cy="40" r="1.5"/>
+    <circle cx="400" cy="40" r="1.5"/>
+    <circle cx="480" cy="40" r="1.5"/>
+    <circle cx="560" cy="40" r="1.5"/>
+    <circle cx="640" cy="40" r="1.5"/>
+    <circle cx="720" cy="40" r="1.5"/>
+    <circle cx="800" cy="40" r="1.5"/>
+    <circle cx="80" cy="100" r="1.5"/>
+    <circle cx="160" cy="100" r="1.5"/>
+    <circle cx="240" cy="100" r="1.5"/>
+    <circle cx="320" cy="100" r="1.5"/>
+    <circle cx="400" cy="100" r="1.5"/>
+    <circle cx="480" cy="100" r="1.5"/>
+    <circle cx="560" cy="100" r="1.5"/>
+    <circle cx="640" cy="100" r="1.5"/>
+    <circle cx="720" cy="100" r="1.5"/>
+    <circle cx="800" cy="100" r="1.5"/>
+    <circle cx="80" cy="160" r="1.5"/>
+    <circle cx="160" cy="160" r="1.5"/>
+    <circle cx="240" cy="160" r="1.5"/>
+    <circle cx="320" cy="160" r="1.5"/>
+    <circle cx="400" cy="160" r="1.5"/>
+    <circle cx="480" cy="160" r="1.5"/>
+    <circle cx="560" cy="160" r="1.5"/>
+    <circle cx="640" cy="160" r="1.5"/>
+    <circle cx="720" cy="160" r="1.5"/>
+    <circle cx="800" cy="160" r="1.5"/>
+    <circle cx="80" cy="220" r="1.5"/>
+    <circle cx="160" cy="220" r="1.5"/>
+    <circle cx="240" cy="220" r="1.5"/>
+    <circle cx="320" cy="220" r="1.5"/>
+    <circle cx="400" cy="220" r="1.5"/>
+    <circle cx="480" cy="220" r="1.5"/>
+    <circle cx="560" cy="220" r="1.5"/>
+    <circle cx="640" cy="220" r="1.5"/>
+    <circle cx="720" cy="220" r="1.5"/>
+    <circle cx="800" cy="220" r="1.5"/>
+    <circle cx="80" cy="280" r="1.5"/>
+    <circle cx="160" cy="280" r="1.5"/>
+    <circle cx="240" cy="280" r="1.5"/>
+    <circle cx="320" cy="280" r="1.5"/>
+    <circle cx="400" cy="280" r="1.5"/>
+    <circle cx="480" cy="280" r="1.5"/>
+    <circle cx="560" cy="280" r="1.5"/>
+    <circle cx="640" cy="280" r="1.5"/>
+    <circle cx="720" cy="280" r="1.5"/>
+    <circle cx="800" cy="280" r="1.5"/>
+    <circle cx="80" cy="340" r="1.5"/>
+    <circle cx="160" cy="340" r="1.5"/>
+    <circle cx="240" cy="340" r="1.5"/>
+    <circle cx="320" cy="340" r="1.5"/>
+    <circle cx="400" cy="340" r="1.5"/>
+    <circle cx="480" cy="340" r="1.5"/>
+    <circle cx="560" cy="340" r="1.5"/>
+    <circle cx="640" cy="340" r="1.5"/>
+    <circle cx="720" cy="340" r="1.5"/>
+    <circle cx="800" cy="340" r="1.5"/>
+  </g>
+
+  <!-- Accent glow on right -->
+  <rect x="984" y="0" width="600" height="396" fill="url(#accent)"/>
+
+  <!-- Left side decorative elements -->
+  <g opacity="0.07" stroke="#c4ff32" stroke-width="1" fill="none">
+    <rect x="80" y="60" width="120" height="80" rx="8"/>
+    <rect x="230" y="90" width="160" height="100" rx="8"/>
+    <rect x="100" y="170" width="180" height="110" rx="8"/>
+    <rect x="310" y="210" width="140" height="90" rx="8"/>
+    <rect x="50" y="280" width="150" height="70" rx="8"/>
+    <rect x="230" y="310" width="120" height="60" rx="8"/>
+  </g>
+
+  <!-- Decorative code brackets -->
+  <g opacity="0.12" fill="#c4ff32">
+    <text x="70" y="180" font-family="ui-monospace, 'SF Mono', Consolas, monospace" font-size="120" font-weight="300">/&gt;</text>
+  </g>
+
+  <!-- Horizontal accent line -->
+  <rect x="984" y="235" width="500" height="1.5" fill="url(#line-grad)" rx="1"/>
+
+  <!-- Main slogan -->
+  <text x="1484" y="180" text-anchor="end" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="42" font-weight="700" fill="#ffffff" letter-spacing="-0.5">
+    Custom software, finally
+  </text>
+  <text x="1484" y="225" text-anchor="end" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="42" font-weight="700" fill="#c4ff32" letter-spacing="-0.5">
+    accessible to your business.
+  </text>
+
+  <!-- Subtitle -->
+  <text x="1484" y="270" text-anchor="end" font-family="ui-monospace, 'SF Mono', 'Cascadia Code', Consolas, monospace" font-size="16" fill="#888888" letter-spacing="0.5">
+    AI-accelerated development for SMEs — corweb.io
+  </text>
+</svg>

@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "@/components/ui/logo";
@@ -25,17 +25,6 @@ export function Footer() {
 
           {/* Social links */}
           <div className="flex items-center gap-4">
-            {siteConfig.links.github && (
-              <a
-                href={siteConfig.links.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={t("footer.visitGitHub")}
-                className="w-9 h-9 rounded-lg bg-secondary border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
-              >
-                <Github className="w-4 h-4" />
-              </a>
-            )}
             {siteConfig.links.linkedin && (
               <a
                 href={siteConfig.links.linkedin}

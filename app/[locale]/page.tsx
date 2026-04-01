@@ -289,7 +289,7 @@ async function build(vision) {
                   {index < processSteps.length - 1 && (
                     <div className="hidden lg:block absolute top-10 left-[60%] w-full h-[2px] bg-linear-to-r from-primary/30 to-transparent" />
                   )}
-                  <div className="relative p-6 rounded-xl bg-card/30 border border-border">
+                  <div className="relative p-6 rounded-xl bg-card/30 border border-border h-full">
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                         <step.icon className="w-5 h-5 text-primary" />
