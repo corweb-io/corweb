@@ -1,19 +1,14 @@
-import {
-  Users,
-  Target,
-  Lightbulb,
-  Heart,
-  ArrowRight,
-  Zap,
-  Code2,
-  Sparkles,
-  Globe,
-} from "lucide-react";
 import { useTranslations } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
 import { Header, Footer } from "@/components/layout";
 import { BreadcrumbSchema } from "@/components/seo";
+import { CtaPanel, PageHero } from "@/components/sections";
+import { Eyebrow } from "@/components/ui/eyebrow";
+import {
+  FadeInUp,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/motion";
 
 export default function AboutPage({
   params,
@@ -52,22 +47,18 @@ function AboutUI() {
 
   const values = [
     {
-      icon: Target,
       title: t("values.value1.title"),
       description: t("values.value1.description"),
     },
     {
-      icon: Lightbulb,
       title: t("values.value2.title"),
       description: t("values.value2.description"),
     },
     {
-      icon: Heart,
       title: t("values.value3.title"),
       description: t("values.value3.description"),
     },
     {
-      icon: Zap,
       title: t("values.value4.title"),
       description: t("values.value4.description"),
     },
@@ -75,17 +66,14 @@ function AboutUI() {
 
   const whyNow = [
     {
-      icon: Code2,
       title: t("whyNow.reason1.title"),
       description: t("whyNow.reason1.description"),
     },
     {
-      icon: Sparkles,
       title: t("whyNow.reason2.title"),
       description: t("whyNow.reason2.description"),
     },
     {
-      icon: Globe,
       title: t("whyNow.reason3.title"),
       description: t("whyNow.reason3.description"),
     },
@@ -96,169 +84,119 @@ function AboutUI() {
       <Header />
 
       <main id="main-content" className="flex-1">
-        {/* Hero Section */}
-        <section className="relative py-20 md:py-28 overflow-hidden">
-          {/* Background Elements */}
-          <div className="absolute inset-0 overflow-hidden mask-b-from-60%">
-            <div className="absolute top-1/4 right-1/3 w-[500px] h-[500px] rounded-full blur-[120px] bg-primary/10" />
-            <div
-              className="absolute inset-0 opacity-[0.03] pointer-events-none"
-              style={{
-                backgroundImage:
-                  "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px)",
-              }}
-            />
-          </div>
+        <PageHero
+          badge={t("badge")}
+          title={t("title")}
+          description={t("description")}
+        />
 
-          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono mb-6 bg-primary/10 text-primary border border-primary/20">
-                <Users className="w-3 h-3" />
-                {t("badge")}
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-                {t("title")}
-              </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                {t("description")}
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Story Section */}
-        <section className="py-12 md:py-20">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-center">
+        {/* Story */}
+        <section className="pb-24 md:pb-32">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 grid gap-10 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
+            <FadeInUp className="lg:sticky lg:top-28 lg:self-start">
+              <h2 className="text-4xl md:text-6xl font-bold leading-[1.02] tracking-[-0.03em]">
                 {t("story.title")}
               </h2>
-              <div className="prose prose-lg dark:prose-invert mx-auto">
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  {t("story.paragraph1")}
-                </p>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  {t("story.paragraph2")}
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  {t("story.paragraph3")}
-                </p>
-              </div>
-            </div>
+            </FadeInUp>
+            <FadeInUp className="space-y-6">
+              <p className="text-2xl md:text-3xl font-medium leading-snug tracking-tight">
+                {t("story.paragraph1")}
+              </p>
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                {t("story.paragraph2")}
+              </p>
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                {t("story.paragraph3")}
+              </p>
+            </FadeInUp>
           </div>
         </section>
 
-        {/* Mission Section */}
-        <section className="py-12 md:py-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-linear-to-b from-transparent via-primary/5 to-transparent" />
-          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="p-8 md:p-12 rounded-2xl bg-card/50 border border-border">
-              <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
-                  {t("mission.title")}
-                </h2>
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  {t("mission.statement")}
-                </p>
-              </div>
-            </div>
-          </div>
+        {/* Mission */}
+        <section className="bg-accent text-accent-foreground">
+          <FadeInUp className="max-w-7xl mx-auto px-6 lg:px-8 py-24 md:py-36">
+            <Eyebrow className="mb-10 text-accent-foreground/70 [&>span]:bg-accent-foreground">
+              {t("mission.title")}
+            </Eyebrow>
+            <p className="max-w-6xl font-display text-[clamp(2rem,4.5vw,4.25rem)] font-bold leading-[1.08] tracking-[-0.03em]">
+              {t("mission.statement")}
+            </p>
+          </FadeInUp>
         </section>
 
-        {/* Values Section */}
-        <section className="py-12 md:py-20">
+        {/* Values */}
+        <section className="py-24 md:py-32">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+            <FadeInUp className="max-w-3xl mb-16">
+              <h2 className="text-4xl md:text-6xl font-bold leading-[1.02] tracking-[-0.03em]">
                 {t("values.title")}
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
                 {t("values.description")}
               </p>
-            </div>
+            </FadeInUp>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <StaggerContainer className="grid gap-x-12 gap-y-14 md:grid-cols-2">
               {values.map((value, index) => (
-                <div
+                <StaggerItem
                   key={index}
-                  className="p-6 rounded-xl bg-card/30 border border-border"
+                  className="border-t-2 border-foreground pt-6"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                      <value.icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold mb-2">
-                        {value.title}
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {value.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                  <span className="font-display text-6xl font-extrabold leading-none tracking-[-0.05em] text-primary">
+                    0{index + 1}
+                  </span>
+                  <h3 className="mt-6 text-2xl md:text-3xl font-bold tracking-tight">
+                    {value.title}
+                  </h3>
+                  <p className="mt-3 max-w-lg text-lg leading-relaxed text-muted-foreground">
+                    {value.description}
+                  </p>
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerContainer>
           </div>
         </section>
 
-        {/* Why Now Section */}
-        <section className="py-12 md:py-20">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+        {/* Why Now */}
+        <section className="pb-24 md:pb-32">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
+            <FadeInUp className="lg:sticky lg:top-28 lg:self-start">
+              <h2 className="text-4xl md:text-6xl font-bold leading-[1.02] tracking-[-0.03em]">
                 {t("whyNow.title")}
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
                 {t("whyNow.description")}
               </p>
-            </div>
+            </FadeInUp>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <ul className="border-t border-border">
               {whyNow.map((item, index) => (
-                <div
+                <li
                   key={index}
-                  className="p-6 rounded-xl bg-card/50 border border-border text-center"
+                  className="grid grid-cols-[2.5rem_1fr] items-baseline gap-4 border-b border-border py-8 md:py-10"
                 >
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="w-7 h-7 text-primary" />
+                  <span className="text-sm font-semibold tabular-nums text-muted-foreground">
+                    0{index + 1}
+                  </span>
+                  <div>
+                    <h3 className="text-2xl md:text-4xl font-bold tracking-tight">
+                      {item.title}
+                    </h3>
+                    <p className="mt-3 max-w-lg leading-relaxed text-muted-foreground">
+                      {item.description}
+                    </p>
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-12 md:py-20">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="p-8 md:p-12 rounded-2xl bg-card/50 border border-primary/20 relative overflow-hidden">
-              <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[150px] bg-primary/10" />
-              </div>
-
-              <div className="relative z-10 max-w-2xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                  {t("cta.title")}
-                </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  {t("cta.description")}
-                </p>
-                <Link
-                  href="/contact"
-                  className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25 cursor-pointer"
-                >
-                  {t("cta.button")}
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        <CtaPanel
+          title={t("cta.title")}
+          description={t("cta.description")}
+          button={t("cta.button")}
+        />
       </main>
 
       <Footer />

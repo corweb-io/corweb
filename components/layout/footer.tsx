@@ -18,7 +18,7 @@ export function Footer() {
             <Link href="/" className="flex items-center">
               <Logo width={180} height={50} />
             </Link>
-            <p className="text-sm text-muted-foreground font-mono">
+            <p className="text-sm text-muted-foreground">
               {t("common.buildingTheFuture")}
             </p>
           </div>
@@ -57,7 +57,7 @@ export function Footer() {
                 {t("footer.legal")}
               </Link>
             </div>
-            <p className="text-center text-xs text-muted-foreground font-mono">
+            <p className="text-center text-xs text-muted-foreground">
               &copy; {new Date().getFullYear()} {siteConfig.name}.{" "}
               {t("common.allRightsReserved")}
             </p>

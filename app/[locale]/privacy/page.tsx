@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Shield } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Header, Footer } from "@/components/layout";
 import { BreadcrumbSchema } from "@/components/seo";
 import { siteConfig } from "@/lib/constants";
+import { Eyebrow } from "@/components/ui/eyebrow";
 
 export async function generateMetadata({
   params,
@@ -99,18 +99,12 @@ function PrivacyUI() {
 
       <main id="main-content" className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-16 md:py-20 overflow-hidden">
-          <div className="absolute inset-0 overflow-hidden mask-b-from-60%">
-            <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] rounded-full blur-[120px] bg-primary/10" />
-          </div>
+        <section className="pt-16 pb-24 md:pt-24 md:pb-32">
 
-          <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono mb-6 bg-primary/10 text-primary border border-primary/20">
-                <Shield className="w-3 h-3" />
-                {t("badge")}
-              </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <div className="mb-12 pb-10 border-b border-border">
+              <Eyebrow className="mb-8">{t("badge")}</Eyebrow>
+              <h1 className="text-[clamp(2.5rem,5.5vw,4.5rem)] font-extrabold leading-[1] tracking-[-0.04em] mb-6">
                 {t("title")}
               </h1>
               <p className="text-muted-foreground">
@@ -126,7 +120,7 @@ function PrivacyUI() {
 
               {sections.map((section, index) => (
                 <section key={index} className="mb-8">
-                  <h2 className="text-xl font-semibold mb-4 text-foreground">
+                  <h2 className="text-2xl font-bold tracking-tight mb-4 text-foreground">
                     {section.title}
                   </h2>
                   <p className="text-muted-foreground leading-relaxed whitespace-pre-line">

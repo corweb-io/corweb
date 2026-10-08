@@ -2,15 +2,15 @@
   "common": {
     "getInTouch": "Get in Touch",
     "viewOurWork": "View Our Work",
-    "startYourProject": "Start Your Project",
+    "startYourProject": "Start your project",
     "allRightsReserved": "All rights reserved.",
-    "buildingTheFuture": "$ building_the_future",
-    "learnMore": "Learn More",
+    "buildingTheFuture": "Custom software for small and medium businesses.",
+    "learnMore": "See our work",
     "skipToContent": "Skip to main content"
   },
   "footer": {
-    "privacy": "Privacy Policy",
-    "legal": "Legal Notice",
+    "privacy": "Privacy policy",
+    "legal": "Legal notice",
     "visitGitHub": "Visit our GitHub profile",
     "visitLinkedIn": "Visit our LinkedIn profile"
   },
@@ -25,7 +25,7 @@
     "toggleMenu": "Toggle menu"
   },
   "hero": {
-    "badge": "custom-software-for-smes",
+    "badge": "Custom software for SMEs",
     "title1": "Custom software,",
     "titleHighlight1": "finally",
     "title2": "accessible to",
@@ -33,32 +33,35 @@
     "description": "AI-accelerated development makes custom software viable for small and medium businesses. Own your tools, ditch the subscriptions, and get solutions built exactly for how you work."
   },
   "mission": {
-    "badge": "why-now",
-    "title": "The Rules Have Changed",
+    "badge": "Why now",
+    "title": "The rules have changed.",
     "description": "What used to cost €100K+ and take months is now achievable at a fraction of the cost. AI-powered development has democratized custom software—making it a smart investment for SMEs, not just enterprises.",
-    "benefit1Title": "Own Your Tools",
+    "benefit1Title": "Own your tools",
     "benefit1Description": "No more monthly SaaS fees adding up. You own the code, the data, and the future of your software.",
-    "benefit2Title": "Built for You",
+    "benefit2Title": "Built for you",
     "benefit2Description": "Forget one-size-fits-all. Get software tailored to your exact workflows and business needs.",
-    "benefit3Title": "Ship Fast",
-    "benefit3Description": "AI-accelerated development means we deliver in weeks, not months. Your ideas become reality faster."
+    "benefit3Title": "Ship fast",
+    "benefit3Description": "AI-accelerated development means we deliver in weeks, not months. Your ideas become reality faster.",
+    "oldPrice": "€100K+",
+    "oldPriceLabel": "What custom software used to cost. Not anymore."
   },
   "services": {
-    "badge": "what-we-build",
-    "title": "Solutions That Fit",
+    "badge": "What we build",
+    "title": "Solutions that fit.",
     "description": "From customer-facing web apps to internal tools, we build software that works the way your business works.",
-    "webAppsTitle": "Web Applications",
+    "webAppsTitle": "Web applications",
     "webAppsDescription": "Modern, responsive web apps built with cutting-edge technologies for performance and scalability.",
-    "mobileAppsTitle": "Mobile Apps",
+    "mobileAppsTitle": "Mobile apps",
     "mobileAppsDescription": "Native and cross-platform mobile applications that your customers will love to use.",
-    "customToolsTitle": "Custom Tools",
+    "customToolsTitle": "Custom tools",
     "customToolsDescription": "Internal dashboards, automation tools, and business software tailored to your operations.",
-    "apiIntegrationsTitle": "API Integrations",
-    "apiIntegrationsDescription": "Connect your systems seamlessly. We build integrations that make your tools work together."
+    "apiIntegrationsTitle": "API integrations",
+    "apiIntegrationsDescription": "Connect your systems seamlessly. We build integrations that make your tools work together.",
+    "seeAll": "Explore our services"
   },
   "process": {
-    "badge": "how-it-works",
-    "title": "From Idea to Launch",
+    "badge": "How it works",
+    "title": "From idea to launch.",
     "description": "A streamlined process designed for speed without sacrificing quality. We keep you involved at every step.",
     "step1Title": "Discovery",
     "step1Description": "We learn your business, understand your needs, and define the scope of your project.",
@@ -70,17 +73,17 @@
     "step4Description": "We deploy your software, train your team, and provide ongoing support."
   },
   "portfolio": {
-    "badge": "our-work",
-    "title": "Software Our Clients Run On",
+    "badge": "Our work",
+    "title": "Software our clients run on.",
     "description": "Custom tools built for real businesses, from luxury concierge operations to Québec software companies, plus products we run ourselves.",
     "viewAll": "See all projects",
     "cta": "Start Your Project"
   },
   "cta": {
-    "badge": "lets-talk",
-    "title": "Ready to Own Your Software?",
+    "badge": "Let's talk",
+    "title": "Ready to own your software?",
     "description": "Stop renting solutions that don't quite fit. Let's build something that's truly yours—designed for your business, owned by you, forever.",
-    "primaryButton": "Start the Conversation"
+    "primaryButton": "Start the conversation"
   },
   "metadata": {
     "title": "Corweb",
@@ -92,11 +95,11 @@
     "fr": "Français"
   },
   "contactPage": {
-    "badge": "get-in-touch",
-    "title": "Let's Build Something Together",
+    "badge": "Get in touch",
+    "title": "Let's build something together.",
     "description": "Have a project in mind? We'd love to hear about it. Tell us what you're looking for and we'll get back to you within 24 hours.",
-    "formTitle": "Send Us a Message",
-    "infoTitle": "Contact Information",
+    "formTitle": "Send us a message",
+    "infoTitle": "Contact information",
     "form": {
       "name": "Name",
       "namePlaceholder": "Your name",
@@ -107,7 +110,7 @@
       "message": "Message",
       "messagePlaceholder": "Tell us about your project, your goals, and how we can help...",
       "optional": "optional",
-      "submit": "Send Message",
+      "submit": "Send message",
       "sending": "Sending...",
       "successTitle": "Message Sent!",
       "successMessage": "Thank you for reaching out. We'll get back to you within 24 hours.",
@@ -122,7 +125,7 @@
       "emailLabel": "Email",
       "locationLabel": "Location",
       "locationValue": "Saint Barts",
-      "responseLabel": "Response Time",
+      "responseLabel": "Response time",
       "responseValue": "Within 24 hours"
     },
     "whyContact": {
@@ -133,33 +136,33 @@
     }
   },
   "servicesPage": {
-    "badge": "what-we-build",
-    "title": "Software Solutions That Fit Your Business",
+    "badge": "What we build",
+    "title": "Software solutions that fit your business.",
     "description": "We build custom software that solves real problems. From web applications to mobile apps, every solution is tailored to your specific needs and workflows.",
     "services": {
       "webApps": {
-        "title": "Web Applications",
+        "title": "Web applications",
         "description": "Modern, responsive web applications built with cutting-edge technologies. From customer portals to complex dashboards, we deliver performant and scalable solutions.",
         "feature1": "Responsive design for all devices",
         "feature2": "Fast loading and optimized performance",
         "feature3": "Secure authentication and data handling"
       },
       "mobileApps": {
-        "title": "Mobile Applications",
+        "title": "Mobile applications",
         "description": "Native and cross-platform mobile apps that your customers will love. We focus on intuitive UX and smooth performance across iOS and Android.",
         "feature1": "Cross-platform with React Native",
         "feature2": "Offline-first capabilities",
         "feature3": "Push notifications and real-time updates"
       },
       "customTools": {
-        "title": "Custom Internal Tools",
+        "title": "Custom internal tools",
         "description": "Streamline your operations with custom dashboards, automation tools, and business software designed around your exact workflows.",
         "feature1": "Tailored to your business processes",
         "feature2": "Integration with existing systems",
         "feature3": "Automation of repetitive tasks"
       },
       "apiIntegrations": {
-        "title": "API & Integrations",
+        "title": "APIs & integrations",
         "description": "Connect your systems seamlessly. We build robust APIs and integrate third-party services to make your tools work together.",
         "feature1": "RESTful and GraphQL APIs",
         "feature2": "Third-party service integrations",
@@ -167,34 +170,34 @@
       }
     },
     "techStack": {
-      "title": "Our Technology Stack",
+      "title": "Our technology stack",
       "description": "We use modern, battle-tested technologies that ensure your software is fast, secure, and maintainable."
     },
     "approach": {
-      "title": "Our Approach",
+      "title": "Our approach.",
       "description": "We combine AI-accelerated development with proven methodologies to deliver quality software faster.",
       "speed": {
-        "title": "AI-Accelerated",
+        "title": "AI-accelerated",
         "description": "Leveraging AI tools to accelerate development without compromising on quality."
       },
       "quality": {
-        "title": "Quality First",
+        "title": "Quality first",
         "description": "Clean code, thorough testing, and best practices ensure long-term maintainability."
       },
       "support": {
-        "title": "Ongoing Support",
+        "title": "Ongoing support",
         "description": "We don't disappear after launch. Continuous support and updates as your needs evolve."
       }
     },
     "pricing": {
-      "title": "Custom Pricing for Every Project",
+      "title": "Custom pricing for every project.",
       "description": "Every business is different, so every project gets a custom quote. We work with your budget to deliver maximum value. No hidden fees, no surprises—just transparent pricing.",
-      "cta": "Get a Free Quote"
+      "cta": "Get a free quote"
     }
   },
   "portfolioPage": {
-    "badge": "our-work",
-    "title": "Selected Work",
+    "badge": "Our work",
+    "title": "Selected work.",
     "description": "Custom web apps and tools we've designed, built and shipped, each one tailored to how the business actually works.",
     "visit": "Visit site",
     "highlightsLabel": "What we built",
@@ -203,9 +206,9 @@
       "product": "Corweb product"
     },
     "cta": {
-      "title": "Your Project Could Be Next",
+      "title": "Your project could be next.",
       "description": "Tell us how your business runs today, and we'll show you the software that would make it easier.",
-      "button": "Start Your Project"
+      "button": "Start your project"
     }
   },
   "projects": {
@@ -299,64 +302,64 @@
     }
   },
   "aboutPage": {
-    "badge": "about-us",
-    "title": "Building the Future of SME Software",
+    "badge": "About us",
+    "title": "Building the future of SME software.",
     "description": "We believe every business deserves custom software that fits perfectly. AI has made this possible—and we're here to make it happen.",
     "story": {
-      "title": "Our Story",
+      "title": "Our story",
       "paragraph1": "Corweb was born from a simple observation: small and medium businesses have always needed custom software, but it's always been too expensive or too slow to build. Enterprise companies get tailored solutions while SMEs are stuck with one-size-fits-all SaaS tools that never quite fit.",
       "paragraph2": "The rise of AI-powered development has changed everything. What used to take months and cost hundreds of thousands of euros can now be delivered in weeks at a fraction of the price. This isn't just about faster coding—it's about democratizing access to custom software.",
       "paragraph3": "We started Corweb to bridge this gap. Our mission is to bring enterprise-quality custom software to businesses of all sizes, with transparent pricing, fast delivery, and solutions that actually solve your problems."
     },
     "mission": {
-      "title": "Our Mission",
+      "title": "Our mission",
       "statement": "To make custom software accessible to every business, regardless of size. We combine AI-accelerated development with human expertise to deliver solutions that fit your exact needs—fast, affordable, and built to last."
     },
     "values": {
-      "title": "Our Values",
+      "title": "Our values",
       "description": "The principles that guide how we work and what we build.",
       "value1": {
-        "title": "Honesty First",
+        "title": "Honesty first",
         "description": "We're upfront about what we can and can't do. No overpromising, no hidden fees, no surprises. If something isn't right for you, we'll tell you."
       },
       "value2": {
-        "title": "Simplicity Over Complexity",
+        "title": "Simplicity over complexity",
         "description": "The best solutions are often the simplest. We don't over-engineer—we build exactly what you need, nothing more, nothing less."
       },
       "value3": {
-        "title": "Your Success Is Our Success",
+        "title": "Your success is our success",
         "description": "We're not just vendors—we're partners. Your project's success matters to us as much as it matters to you."
       },
       "value4": {
-        "title": "Speed Without Sacrifice",
+        "title": "Speed without sacrifice",
         "description": "AI helps us move fast, but we never compromise on quality. Every line of code is reviewed, tested, and built to last."
       }
     },
     "whyNow": {
-      "title": "Why Now?",
+      "title": "Why now?",
       "description": "The timing has never been better for custom software development.",
       "reason1": {
-        "title": "AI-Powered Development",
+        "title": "AI-powered development",
         "description": "Modern AI tools accelerate development without compromising quality, making custom software affordable for SMEs."
       },
       "reason2": {
-        "title": "Mature Ecosystems",
+        "title": "Mature ecosystems",
         "description": "The JavaScript ecosystem, cloud platforms, and open-source tools have reached a level of maturity that enables rapid, reliable development."
       },
       "reason3": {
-        "title": "Remote-First World",
+        "title": "A remote-first world",
         "description": "Businesses are more digital than ever. The need for custom digital tools has never been greater."
       }
     },
     "cta": {
-      "title": "Let's Work Together",
+      "title": "Let's work together.",
       "description": "Ready to build software that's truly yours? We'd love to hear about your project.",
-      "button": "Get in Touch"
+      "button": "Get in touch"
     }
   },
   "privacyPage": {
-    "badge": "privacy",
-    "title": "Privacy Policy",
+    "badge": "Privacy",
+    "title": "Privacy policy",
     "lastUpdated": "Last updated",
     "lastUpdatedDate": "December 2024",
     "intro": "At Corweb, we are committed to protecting your privacy. This policy explains how we collect, use, and protect your personal data in accordance with the General Data Protection Regulation (GDPR).",
@@ -392,8 +395,8 @@
     }
   },
   "legalPage": {
-    "badge": "legal-notice",
-    "title": "Legal Notice",
+    "badge": "Legal notice",
+    "title": "Legal notice",
     "lastUpdated": "Last updated",
     "lastUpdatedDate": "December 2024",
     "sections": {
@@ -430,9 +433,9 @@
     "learnMore": "Learn more"
   },
   "notFound": {
-    "title": "Page Not Found",
+    "title": "Page not found.",
     "description": "The page you're looking for doesn't exist or has been moved. Let's get you back on track.",
-    "backHome": "Back to Home",
-    "goBack": "Go Back"
+    "backHome": "Back to home",
+    "goBack": "Go back"
   }
 }

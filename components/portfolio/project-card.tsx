@@ -45,7 +45,7 @@ function KindBadge({ project }: { project: Project }) {
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-full border px-2.5 py-0.5 font-mono text-xs",
+        "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold",
         project.kind === "product"
           ? "border-primary/30 bg-primary/10 text-primary"
           : "border-border bg-secondary text-muted-foreground",
@@ -91,11 +91,11 @@ export function ProjectShowcase({
       <div className="min-w-0">
         <div className="mb-4 flex flex-wrap items-center gap-3">
           <KindBadge project={project} />
-          <span className="font-mono text-xs text-muted-foreground">
+          <span className="text-sm text-muted-foreground">
             {t(`${project.slug}.client`)} · {project.year}
           </span>
         </div>
-        <h2 className="mb-3 text-3xl font-bold tracking-tight md:text-4xl">
+        <h2 className="mb-3 text-4xl font-bold tracking-[-0.03em] md:text-5xl">
           {t(`${project.slug}.name`)}
         </h2>
         <p className="mb-4 text-lg font-medium">
@@ -111,7 +111,7 @@ export function ProjectShowcase({
           </p>
         )}
 
-        <p className="mb-3 font-mono text-xs uppercase tracking-wider text-muted-foreground">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
           {page("highlightsLabel")}
         </p>
         <ul className="mb-6 space-y-2">
@@ -127,7 +127,7 @@ export function ProjectShowcase({
           {project.stack.map((tech) => (
             <li
               key={tech}
-              className="rounded-md border border-border bg-secondary px-2.5 py-1 font-mono text-xs text-muted-foreground"
+              className="rounded-full border border-border px-3 py-1 text-xs font-medium text-muted-foreground"
             >
               {tech}
             </li>
@@ -148,7 +148,13 @@ export function ProjectShowcase({
   );
 }
 
-export function ProjectPreview({ project }: { project: Project }) {
+export function ProjectPreview({
+  project,
+  large = false,
+}: {
+  project: Project;
+  large?: boolean;
+}) {
   const t = useTranslations("projects.items");
 
   return (
@@ -161,12 +167,23 @@ export function ProjectPreview({ project }: { project: Project }) {
       <div className="transition-transform duration-300 group-hover:-translate-y-1">
         <BrowserFrame
           project={project}
-          sizes="(min-width: 1024px) 380px, (min-width: 768px) 50vw, 100vw"
+          sizes={
+            large
+              ? "(min-width: 1024px) 800px, 100vw"
+              : "(min-width: 1024px) 380px, (min-width: 768px) 50vw, 100vw"
+          }
         />
       </div>
       <div className="mt-4 flex items-start justify-between gap-3">
         <div>
-          <h3 className="font-semibold">{t(`${project.slug}.name`)}</h3>
+          <h3
+            className={cn(
+              "font-semibold tracking-tight",
+              large ? "text-2xl md:text-3xl" : "text-lg",
+            )}
+          >
+            {t(`${project.slug}.name`)}
+          </h3>
           <p className="text-sm text-muted-foreground">
             {t(`${project.slug}.tagline`)}
           </p>

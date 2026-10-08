@@ -85,7 +85,7 @@ export function ContactForm() {
 
   if (formState === "success") {
     return (
-      <div className="p-8 rounded-2xl bg-card/50 border border-primary/30 text-center">
+      <div className="py-8 text-center">
         <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
           <CheckCircle2 className="w-8 h-8 text-primary" />
         </div>
@@ -174,7 +174,7 @@ export function ContactForm() {
       <Button
         type="submit"
         size="lg"
-        className="w-full md:w-auto"
+        className="h-13 w-full rounded-full bg-accent px-8 text-base font-semibold text-accent-foreground hover:bg-accent/90 md:w-auto"
         disabled={formState === "submitting"}
       >
         {formState === "submitting" ? (

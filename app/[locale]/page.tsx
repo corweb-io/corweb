@@ -1,51 +1,58 @@
 "use client";
 
-import {
-  ArrowRight,
-  Terminal,
-  Sparkles,
-  Code2,
-  Smartphone,
-  Wrench,
-  Link2,
-  Search,
-  Palette,
-  Rocket,
-  Headphones,
-  Clock,
-} from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { projects } from "@/lib/projects";
 import { ProjectPreview } from "@/components/portfolio/project-card";
 import { Header, Footer } from "@/components/layout";
+import { CtaPanel } from "@/components/sections";
+import { Eyebrow } from "@/components/ui/eyebrow";
 import {
   FadeInUp,
-  FadeIn,
   StaggerContainer,
   StaggerItem,
+  motion,
 } from "@/components/ui/motion";
 
 export default function Home() {
   return <HomeUI />;
 }
 
+// Lime highlighter that sweeps across a word on load. The plain word stays
+// underneath so it's readable before (and without) the animation.
+function Marker({ children }: { children: string }) {
+  return (
+    <span className="relative inline-block">
+      <span className="px-[0.08em]">{children}</span>
+      <motion.span
+        aria-hidden
+        className="absolute inset-0 rounded-[0.08em] bg-accent px-[0.08em] text-accent-foreground"
+        initial={{ clipPath: "inset(0 100% 0 0)" }}
+        animate={{ clipPath: "inset(0 0% 0 0)" }}
+        transition={{ duration: 0.7, delay: 0.5, ease: [0.65, 0, 0.35, 1] }}
+      >
+        {children}
+      </motion.span>
+    </span>
+  );
+}
+
 function HomeUI() {
   const t = useTranslations();
 
+  const featuredProjects = projects.filter((project) => project.featured);
+
   const benefits = [
     {
-      icon: Sparkles,
       title: t("mission.benefit1Title"),
       description: t("mission.benefit1Description"),
     },
     {
-      icon: Code2,
       title: t("mission.benefit2Title"),
       description: t("mission.benefit2Description"),
     },
     {
-      icon: Clock,
       title: t("mission.benefit3Title"),
       description: t("mission.benefit3Description"),
     },
@@ -53,22 +60,18 @@ function HomeUI() {
 
   const services = [
     {
-      icon: Code2,
       title: t("services.webAppsTitle"),
       description: t("services.webAppsDescription"),
     },
     {
-      icon: Smartphone,
       title: t("services.mobileAppsTitle"),
       description: t("services.mobileAppsDescription"),
     },
     {
-      icon: Wrench,
       title: t("services.customToolsTitle"),
       description: t("services.customToolsDescription"),
     },
     {
-      icon: Link2,
       title: t("services.apiIntegrationsTitle"),
       description: t("services.apiIntegrationsDescription"),
     },
@@ -76,26 +79,18 @@ function HomeUI() {
 
   const processSteps = [
     {
-      number: "01",
-      icon: Search,
       title: t("process.step1Title"),
       description: t("process.step1Description"),
     },
     {
-      number: "02",
-      icon: Palette,
       title: t("process.step2Title"),
       description: t("process.step2Description"),
     },
     {
-      number: "03",
-      icon: Code2,
       title: t("process.step3Title"),
       description: t("process.step3Description"),
     },
     {
-      number: "04",
-      icon: Rocket,
       title: t("process.step4Title"),
       description: t("process.step4Description"),
     },
@@ -107,117 +102,116 @@ function HomeUI() {
 
       <main id="main-content" className="flex-1">
         {/* Hero Section */}
-        <section className="relative min-h-[85vh] flex items-center overflow-hidden">
-          {/* Background Elements */}
-          <div className="absolute inset-0 overflow-hidden mask-b-from-60%">
-            <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] rounded-full blur-[120px] bg-primary/10" />
-            <div
-              className="absolute inset-0 opacity-[0.03] pointer-events-none"
-              style={{
-                backgroundImage:
-                  "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px)",
-              }}
-            />
-            {/* Code decoration */}
-            <div className="absolute top-32 left-10 font-mono text-xs text-foreground/5 select-none hidden lg:block">
-              <pre>{`const yourBusiness = {
-  needs: "custom",
-  budget: "realistic",
-  timeline: "fast"
-};`}</pre>
-            </div>
-            <div className="absolute bottom-32 right-10 font-mono text-xs text-foreground/5 select-none hidden lg:block">
-              <pre>{`// AI-accelerated development
-async function build(vision) {
-  return await ship(vision);
-}`}</pre>
-            </div>
-          </div>
+        <section className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-20 md:pt-24 md:pb-28">
+          <FadeInUp>
+            <Eyebrow className="mb-10">{t("hero.badge")}</Eyebrow>
+            <h1 className="text-[clamp(2.75rem,7.5vw,7rem)] font-extrabold leading-[1] tracking-[-0.04em]">
+              {t("hero.title1")} <Marker>{t("hero.titleHighlight1")}</Marker>{" "}
+              {t("hero.title2")}{" "}
+              <span className="underline decoration-accent decoration-[0.08em] underline-offset-[0.14em]">
+                {t("hero.titleHighlight2")}
+              </span>
+            </h1>
+          </FadeInUp>
 
-          {/* Content */}
-          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20">
-            <FadeInUp className="max-w-4xl">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-mono mb-8 bg-primary/10 text-primary border border-primary/20">
-                <Terminal className="w-4 h-4" />
-                <span className="text-muted-foreground">~/</span>
-                {t("hero.badge")}
+          <FadeInUp
+            delay={0.2}
+            className="mt-14 md:mt-20 pt-10 border-t border-border grid gap-10 md:grid-cols-[1fr_auto] md:items-end"
+          >
+            <p className="max-w-xl text-lg md:text-xl leading-relaxed text-muted-foreground">
+              {t("hero.description")}
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-2 px-7 py-4 rounded-full bg-accent text-accent-foreground font-semibold transition-transform hover:-translate-y-0.5"
+              >
+                {t("common.startYourProject")}
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+              <a
+                href="#work"
+                className="inline-flex items-center gap-2 px-7 py-4 rounded-full border border-border font-semibold transition-colors hover:border-foreground/40"
+              >
+                {t("common.learnMore")}
+              </a>
+            </div>
+          </FadeInUp>
+        </section>
+
+        {/* Portfolio Section */}
+        <section id="work" className="scroll-mt-20 pb-24 md:pb-32">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <FadeInUp className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between mb-12 md:mb-16">
+              <div className="max-w-3xl">
+                <Eyebrow className="mb-5">{t("portfolio.badge")}</Eyebrow>
+                <h2 className="text-4xl md:text-6xl font-bold leading-[1.02] tracking-[-0.03em]">
+                  {t("portfolio.title")}
+                </h2>
+                <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground">
+                  {t("portfolio.description")}
+                </p>
               </div>
-
-              {/* Heading */}
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
-                {t("hero.title1")}{" "}
-                <span className="relative inline-block text-primary">
-                  {t("hero.titleHighlight1")}
-                  <span className="absolute -right-1 top-0 h-full w-[3px] bg-primary animate-pulse" />
-                </span>
-                <br />
-                {t("hero.title2")}{" "}
-                <span className="text-primary">
-                  {t("hero.titleHighlight2")}
-                </span>
-              </h1>
-
-              {/* Description */}
-              <p className="text-lg md:text-xl leading-relaxed max-w-2xl mb-10 text-muted-foreground">
-                {t("hero.description")}
-              </p>
-
-              {/* CTAs */}
-              <FadeInUp delay={0.2}>
-                <div className="flex flex-wrap gap-4">
-                  <Link
-                    href="/contact"
-                    className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25 cursor-pointer"
-                  >
-                    <span className="font-mono text-sm">$</span>
-                    {t("common.startYourProject")}
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                  <a
-                    href="#services"
-                    className="inline-flex items-center gap-2 px-6 py-3 font-semibold rounded-lg transition-all bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border cursor-pointer"
-                  >
-                    {t("common.learnMore")}
-                  </a>
-                </div>
-              </FadeInUp>
+              <Link
+                href="/portfolio"
+                className="group inline-flex shrink-0 items-center gap-2 font-semibold hover:text-primary"
+              >
+                {t("portfolio.viewAll")}
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Link>
             </FadeInUp>
+
+            <StaggerContainer className="grid gap-x-8 gap-y-12 lg:grid-cols-3">
+              {featuredProjects.map((project, index) => (
+                <StaggerItem
+                  key={project.slug}
+                  className={
+                    index === 0 ? "lg:col-span-2 lg:row-span-2" : undefined
+                  }
+                >
+                  <ProjectPreview project={project} large={index === 0} />
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
           </div>
         </section>
 
         {/* Mission Section */}
-        <section className="py-24 relative overflow-hidden">
-          <div className="absolute inset-0 bg-linear-to-b from-transparent via-primary/5 to-transparent" />
-          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-            {/* Section Header */}
-            <FadeInUp className="max-w-3xl mx-auto text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono mb-6 bg-primary/10 text-primary border border-primary/20">
-                <Sparkles className="w-3 h-3" />
-                {t("mission.badge")}
+        <section className="bg-accent text-accent-foreground">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 md:py-32">
+            <FadeInUp className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-end lg:gap-20">
+              <div>
+                <Eyebrow className="mb-6 text-accent-foreground/70 [&>span]:bg-accent-foreground">
+                  {t("mission.badge")}
+                </Eyebrow>
+                <h2 className="text-[clamp(2.75rem,6.5vw,6rem)] font-extrabold leading-[0.98] tracking-[-0.04em]">
+                  {t("mission.title")}
+                </h2>
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-                {t("mission.title")}
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg md:text-xl leading-relaxed text-accent-foreground/80">
                 {t("mission.description")}
               </p>
             </FadeInUp>
 
-            {/* Benefits Grid */}
-            <StaggerContainer className="grid md:grid-cols-3 gap-8">
+            <FadeInUp className="mt-16 md:mt-24">
+              <p className="font-display text-[clamp(4.5rem,15vw,13rem)] font-extrabold leading-[0.9] tracking-[-0.05em] line-through decoration-[0.07em]">
+                {t("mission.oldPrice")}
+              </p>
+              <p className="mt-4 text-lg font-semibold">
+                {t("mission.oldPriceLabel")}
+              </p>
+            </FadeInUp>
+
+            <StaggerContainer className="mt-16 md:mt-24 grid gap-10 md:grid-cols-3 border-t border-accent-foreground/20 pt-10">
               {benefits.map((benefit, index) => (
-                <StaggerItem
-                  key={index}
-                  className="group p-8 rounded-2xl bg-card/50 border border-border hover:border-primary/30 transition-all hover:-translate-y-1"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                    <benefit.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">
+                <StaggerItem key={index}>
+                  <span className="text-sm font-semibold tabular-nums text-accent-foreground/60">
+                    0{index + 1}
+                  </span>
+                  <h3 className="mt-3 text-2xl font-bold tracking-tight">
                     {benefit.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="mt-3 leading-relaxed text-accent-foreground/75">
                     {benefit.description}
                   </p>
                 </StaggerItem>
@@ -227,160 +221,88 @@ async function build(vision) {
         </section>
 
         {/* Services Section */}
-        <section id="services" className="py-24 relative">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            {/* Section Header */}
-            <FadeInUp className="max-w-3xl mx-auto text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono mb-6 bg-primary/10 text-primary border border-primary/20">
-                <Code2 className="w-3 h-3" />
-                {t("services.badge")}
-              </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+        <section id="services" className="py-24 md:py-32">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
+            <FadeInUp className="lg:sticky lg:top-28 lg:self-start">
+              <Eyebrow className="mb-5">{t("services.badge")}</Eyebrow>
+              <h2 className="text-4xl md:text-6xl font-bold leading-[1.02] tracking-[-0.03em]">
                 {t("services.title")}
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
                 {t("services.description")}
               </p>
+              <Link
+                href="/services"
+                className="group mt-8 inline-flex items-center gap-2 font-semibold hover:text-primary"
+              >
+                {t("services.seeAll")}
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Link>
             </FadeInUp>
 
-            {/* Services Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <ul className="border-t border-border">
               {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="group p-6 rounded-xl bg-card/30 border border-border hover:border-primary/30 transition-all hover:-translate-y-1"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                    <service.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
+                <li key={index} className="border-b border-border">
+                  <Link
+                    href="/services"
+                    className="group grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-4 py-8 md:py-10"
+                  >
+                    <span className="text-sm font-semibold tabular-nums text-muted-foreground">
+                      0{index + 1}
+                    </span>
+                    <div>
+                      <h3 className="text-2xl md:text-4xl font-bold tracking-tight transition-transform duration-300 group-hover:translate-x-2">
+                        {service.title}
+                      </h3>
+                      <p className="mt-3 max-w-lg leading-relaxed text-muted-foreground">
+                        {service.description}
+                      </p>
+                    </div>
+                    <ArrowUpRight className="w-6 h-6 text-muted-foreground transition-all duration-300 group-hover:rotate-45 group-hover:text-primary" />
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
         {/* Process Section */}
-        <section className="py-24 relative overflow-hidden">
-          <div className="absolute inset-0 bg-linear-to-b from-transparent via-primary/5 to-transparent" />
-          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-            {/* Section Header */}
-            <div className="max-w-3xl mx-auto text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono mb-6 bg-primary/10 text-primary border border-primary/20">
-                <Rocket className="w-3 h-3" />
-                {t("process.badge")}
-              </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+        <section className="pb-24 md:pb-32">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <FadeInUp className="max-w-3xl mb-16">
+              <Eyebrow className="mb-5">{t("process.badge")}</Eyebrow>
+              <h2 className="text-4xl md:text-6xl font-bold leading-[1.02] tracking-[-0.03em]">
                 {t("process.title")}
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
                 {t("process.description")}
               </p>
-            </div>
+            </FadeInUp>
 
-            {/* Process Steps */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <StaggerContainer className="grid gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-4">
               {processSteps.map((step, index) => (
-                <div key={index} className="relative">
-                  {/* Connector Line (hidden on mobile and last item) */}
-                  {index < processSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-10 left-[60%] w-full h-[2px] bg-linear-to-r from-primary/30 to-transparent" />
-                  )}
-                  <div className="relative p-6 rounded-xl bg-card/30 border border-border h-full">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                        <step.icon className="w-5 h-5 text-primary" />
-                      </div>
-                      <span className="text-3xl font-bold text-primary/20 font-mono">
-                        {step.number}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
+                <StaggerItem key={index} className="border-t-2 border-foreground pt-6">
+                  <span className="font-display text-7xl md:text-8xl font-extrabold leading-none tracking-[-0.05em] text-primary">
+                    0{index + 1}
+                  </span>
+                  <h3 className="mt-6 text-2xl font-bold tracking-tight">
+                    {step.title}
+                  </h3>
+                  <p className="mt-3 leading-relaxed text-muted-foreground">
+                    {step.description}
+                  </p>
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerContainer>
           </div>
         </section>
 
-        {/* Portfolio Section */}
-        <section className="py-24 relative">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="max-w-2xl mx-auto text-center mb-14">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono mb-6 bg-primary/10 text-primary border border-primary/20">
-                <Terminal className="w-3 h-3" />
-                {t("portfolio.badge")}
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                {t("portfolio.title")}
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                {t("portfolio.description")}
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-              {projects
-                .filter((project) => project.featured)
-                .map((project) => (
-                <ProjectPreview key={project.slug} project={project} />
-              ))}
-            </div>
-
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <Link
-                href="/portfolio"
-                className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25"
-              >
-                {t("portfolio.viewAll")}
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 font-semibold rounded-lg border border-border hover:border-primary/40 transition-colors"
-              >
-                {t("portfolio.cta")}
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Final CTA Section */}
-        <section className="py-24 relative overflow-hidden">
-          <div className="absolute inset-0 bg-linear-to-t from-primary/10 via-transparent to-transparent" />
-          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono mb-6 bg-primary/10 text-primary border border-primary/20">
-                <Headphones className="w-3 h-3" />
-                {t("cta.badge")}
-              </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-                {t("cta.title")}
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-                {t("cta.description")}
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25 cursor-pointer"
-                >
-                  <span className="font-mono text-sm">$</span>
-                  {t("cta.primaryButton")}
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        <CtaPanel
+          badge={t("cta.badge")}
+          title={t("cta.title")}
+          description={t("cta.description")}
+          button={t("cta.primaryButton")}
+        />
       </main>
 
       <Footer />
