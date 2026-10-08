@@ -100,7 +100,7 @@ function PrivacyUI() {
       <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="relative py-16 md:py-20 overflow-hidden">
-          <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden mask-b-from-60%">
             <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] rounded-full blur-[120px] bg-primary/10" />
           </div>
 

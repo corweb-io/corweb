@@ -132,7 +132,7 @@ function ServicesUI() {
         {/* Hero Section */}
         <section className="relative py-20 md:py-28 overflow-hidden">
           {/* Background Elements */}
-          <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden mask-b-from-60%">
             <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] rounded-full blur-[120px] bg-primary/10" />
             <div
               className="absolute inset-0 opacity-[0.03] pointer-events-none"
