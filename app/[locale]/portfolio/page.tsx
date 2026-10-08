@@ -1,21 +1,13 @@
 import type { Metadata } from "next";
-import {
-  Folder,
-  Code2,
-  Smartphone,
-  Wrench,
-  Link2,
-  ArrowRight,
-  Sparkles,
-  Clock,
-  Star,
-} from "lucide-react";
+import { Folder, ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Header, Footer } from "@/components/layout";
 import { BreadcrumbSchema } from "@/components/seo";
 import { siteConfig } from "@/lib/constants";
+import { projects } from "@/lib/projects";
+import { ProjectShowcase } from "@/components/portfolio/project-card";
 
 export async function generateMetadata({
   params,
@@ -73,31 +65,6 @@ async function PortfolioContent({
 function PortfolioUI() {
   const t = useTranslations("portfolioPage");
 
-  const categories = [
-    { icon: Code2, label: t("categories.webApps") },
-    { icon: Smartphone, label: t("categories.mobileApps") },
-    { icon: Wrench, label: t("categories.tools") },
-    { icon: Link2, label: t("categories.integrations") },
-  ];
-
-  const earlyBenefits = [
-    {
-      icon: Star,
-      title: t("earlyBenefits.benefit1.title"),
-      description: t("earlyBenefits.benefit1.description"),
-    },
-    {
-      icon: Clock,
-      title: t("earlyBenefits.benefit2.title"),
-      description: t("earlyBenefits.benefit2.description"),
-    },
-    {
-      icon: Sparkles,
-      title: t("earlyBenefits.benefit3.title"),
-      description: t("earlyBenefits.benefit3.description"),
-    },
-  ];
-
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -118,7 +85,7 @@ function PortfolioUI() {
           </div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-16">
+            <div className="max-w-3xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono mb-6 bg-primary/10 text-primary border border-primary/20">
                 <Folder className="w-3 h-3" />
                 {t("badge")}
@@ -133,100 +100,17 @@ function PortfolioUI() {
           </div>
         </section>
 
-        {/* Categories Section */}
-        <section className="py-8">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="flex flex-wrap justify-center gap-3">
-              {categories.map((category, index) => (
-                <div
-                  key={index}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-secondary border border-border"
-                >
-                  <category.icon className="w-4 h-4 text-primary" />
-                  {category.label}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Coming Soon Projects Grid */}
-        <section className="py-12 md:py-20">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[1, 2, 3].map((index) => (
-                <div
-                  key={index}
-                  className="group relative p-8 rounded-2xl bg-card/30 border border-dashed border-border/50 flex flex-col items-center justify-center min-h-[320px] hover:border-primary/30 transition-colors"
-                >
-                  <div className="w-20 h-20 rounded-2xl bg-primary/5 border border-primary/10 flex items-center justify-center mb-6">
-                    {index === 1 && (
-                      <Code2 className="w-10 h-10 text-primary/30" />
-                    )}
-                    {index === 2 && (
-                      <Smartphone className="w-10 h-10 text-primary/30" />
-                    )}
-                    {index === 3 && (
-                      <Wrench className="w-10 h-10 text-primary/30" />
-                    )}
-                  </div>
-                  <span className="text-lg font-mono text-muted-foreground mb-2">
-                    {t("projectPlaceholder")}
-                  </span>
-                  <span className="text-sm text-muted-foreground/60">
-                    {t("projectStatus")}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Honest Message Section */}
-        <section className="py-12 md:py-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-linear-to-b from-transparent via-primary/5 to-transparent" />
-          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
-                {t("honestSection.title")}
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                {t("honestSection.description")}
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Early Adopter Benefits */}
-        <section className="py-12 md:py-20">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                {t("earlyBenefits.title")}
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                {t("earlyBenefits.description")}
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {earlyBenefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="p-6 rounded-xl bg-card/50 border border-border text-center"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {benefit.description}
-                  </p>
-                </div>
-              ))}
-            </div>
+        {/* Projects */}
+        <section className="pb-12 md:pb-20">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-24 md:space-y-32">
+            {projects.map((project, index) => (
+              <ProjectShowcase
+                key={project.slug}
+                project={project}
+                reverse={index % 2 === 1}
+                priority={index === 0}
+              />
+            ))}
           </div>
         </section>
 

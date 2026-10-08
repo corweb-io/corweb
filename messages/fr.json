@@ -71,11 +71,10 @@
   },
   "portfolio": {
     "badge": "nos-realisations",
-    "title": "Projets en Cours",
-    "description": "Nous construisons actuellement des projets passionnants pour nos premiers clients. Bientôt, vous verrez ici des résultats concrets.",
-    "projectPlaceholder": "Bientôt disponible...",
-    "earlyBirdMessage": "Vous voulez être parmi nos premiers clients ? Les adopteurs précoces bénéficient d'une attention prioritaire et de tarifs spéciaux.",
-    "cta": "Devenir un Premier Client"
+    "title": "Les Logiciels Qui Font Tourner Nos Clients",
+    "description": "Des outils sur-mesure pour de vraies entreprises, de la conciergerie de luxe aux éditeurs de logiciels québécois, et des produits que nous exploitons nous-mêmes.",
+    "viewAll": "Voir tous les projets",
+    "cta": "Démarrer Votre Projet"
   },
   "cta": {
     "badge": "parlons-en",
@@ -195,40 +194,108 @@
   },
   "portfolioPage": {
     "badge": "nos-realisations",
-    "title": "Projets à Venir",
-    "description": "Nous construisons actuellement des projets passionnants pour nos premiers clients. Cette page présentera bientôt de vrais résultats et histoires de succès.",
-    "categories": {
-      "webApps": "Apps Web",
-      "mobileApps": "Apps Mobiles",
-      "tools": "Outils Sur-Mesure",
-      "integrations": "Intégrations"
-    },
-    "projectPlaceholder": "Projet en cours",
-    "projectStatus": "Bientôt disponible",
-    "honestSection": {
-      "title": "Nous Démarrons Tout Juste",
-      "description": "En tant que nouvelle agence, nous n'avons pas encore de portfolio de projets passés à vous montrer. Ce que nous avons, c'est une approche fraîche, des capacités de développement accélérées par l'IA, et la détermination de faire de chaque client précoce une histoire de succès."
-    },
-    "earlyBenefits": {
-      "title": "Pourquoi Être un Client Précoce ?",
-      "description": "Les adopteurs précoces bénéficient d'un traitement spécial. Voici ce que vous pouvez attendre.",
-      "benefit1": {
-        "title": "Attention Prioritaire",
-        "description": "Avec moins de clients, vous bénéficiez de plus de notre attention et de délais de réponse plus rapides."
-      },
-      "benefit2": {
-        "title": "Planning Flexible",
-        "description": "Nous nous adaptons à votre emploi du temps et à vos besoins au fur et à mesure que le projet évolue."
-      },
-      "benefit3": {
-        "title": "Tarifs Partenaire Fondateur",
-        "description": "Tarification spéciale pour les clients qui nous aident à construire notre portfolio et réputation."
-      }
+    "title": "Nos Réalisations",
+    "description": "Des applications web et outils sur-mesure que nous avons conçus, développés et livrés, chacun adapté au fonctionnement réel de l'entreprise.",
+    "visit": "Voir le site",
+    "highlightsLabel": "Ce que nous avons construit",
+    "kinds": {
+      "client": "Projet client",
+      "product": "Produit Corweb"
     },
     "cta": {
-      "title": "Faites Partie de Notre Portfolio",
-      "description": "Votre projet pourrait être le premier présenté ici. Créons ensemble quelque chose d'incroyable.",
+      "title": "Votre Projet Pourrait Être le Prochain",
+      "description": "Expliquez-nous comment fonctionne votre entreprise aujourd'hui, et nous vous montrerons le logiciel qui vous simplifierait la vie.",
       "button": "Démarrer Votre Projet"
+    }
+  },
+  "projects": {
+    "items": {
+      "rallia": {
+        "name": "Rallia",
+        "client": "App de sports de raquette, Montréal",
+        "tagline": "La mise en relation des joueurs de tennis et de pickleball.",
+        "description": "Notre propre application iOS et Android, lancée à Montréal : elle met en relation des joueurs de même niveau pour de vraies parties planifiées, et gère ligues et tournois en pilote automatique.",
+        "metric": "1 000+ joueurs · 880+ parties jouées",
+        "highlights": [
+          "Carte interactive des terrains avec disponibilités en temps réel",
+          "Niveaux vérifiés (NTRP / DUPR) et scores de fiabilité",
+          "Marché de parties ouvertes, messagerie et invitations",
+          "Ligues et tournois automatisés avec paiements Stripe"
+        ]
+      },
+      "alfred": {
+        "name": "Alfred",
+        "client": "Conciergerie de villas de luxe, Saint-Barth",
+        "tagline": "Le back-office d'une conciergerie de villas de luxe.",
+        "description": "Une seule plateforme pour gérer des séjours haut de gamme, qui remplace tableurs et fils WhatsApp par une source unique pour toute l'équipe.",
+        "highlights": [
+          "Fiches clients avec préférences structurées et briefings",
+          "Calendrier des opérations partagé, avec alertes et notifications push",
+          "Checklists pré-arrivée et tableaux de tâches par séjour",
+          "Annuaire des prestataires, suivi des commissions et itinéraires partageables"
+        ]
+      },
+      "msm": {
+        "name": "MSM",
+        "client": "Montreal Software Machine",
+        "tagline": "La refonte complète du site d'un éditeur de logiciels québécois.",
+        "description": "Un site moderne pour un éditeur de logiciels de gestion au service des entreprises québécoises depuis 1998, livré sous forme de site statique rapide qui tourne sur leur hébergement existant.",
+        "highlights": [
+          "Pages solutions, produits, tarifs, carrières et support",
+          "Mode clair et sombre, avec une identité visuelle rafraîchie",
+          "Formulaire de contact et redirections de toutes les anciennes URL",
+          "Export statique prêt pour leur serveur Plesk, sans Node.js"
+        ]
+      },
+      "nutrisoft": {
+        "name": "NutriSoft",
+        "client": "Les logiciels agroalimentaires de MSM",
+        "tagline": "Un nouveau site pour des logiciels conçus pour l'agroalimentaire.",
+        "description": "Le site de NutriSoft, la suite de MSM pour les producteurs, distributeurs et transformateurs alimentaires, y compris des outils qui fonctionnent sans aucune connexion internet.",
+        "highlights": [
+          "Bannière vidéo mettant en scène les secteurs desservis",
+          "Pages par secteur et par région pour le marché agroalimentaire",
+          "Pages support, contact et mentions légales",
+          "Mode clair et sombre, navigation mobile"
+        ]
+      },
+      "alize": {
+        "name": "Alizé",
+        "client": "SaaS pour les entrepreneurs de Saint-Barth",
+        "tagline": "Facturation et administratif pour les entrepreneurs de l'île.",
+        "description": "Notre propre produit, conçu pour les micro-entrepreneurs et petites sociétés de Saint-Barth, dont la fiscalité locale n'est pas gérée par les outils classiques.",
+        "highlights": [
+          "Devis et factures PDF conformes au format français",
+          "Suivi du chiffre d'affaires sur plusieurs entreprises",
+          "Estimation des cotisations CPS locales intégrée",
+          "Offre gratuite et formule Pro via Stripe"
+        ]
+      },
+      "madeWithPeace": {
+        "name": "Made with Peace",
+        "client": "Marque de mode",
+        "tagline": "Un configurateur de jeans sur-mesure pour une marque de mode.",
+        "description": "Un outil interactif où les clients créent leur propre jean, puis envoient le design final directement à l'atelier.",
+        "highlights": [
+          "Choix du délavage et de la taille, puis placement et rotation de bisous brodés",
+          "Vues avant et arrière avec des patchs photoréalistes",
+          "Designs envoyés à la marque sous forme de fiche de commande",
+          "Interface bilingue et adaptée au mobile"
+        ]
+      },
+      "creneauSport": {
+        "name": "CréneauSport",
+        "client": "Réservation sportive publique, Montréal",
+        "tagline": "Réserver les installations sportives de Montréal, sans prise de tête.",
+        "description": "Une alternative moderne et pensée mobile au système de réservation de la Ville de Montréal, pour trouver un terrain libre en quelques secondes.",
+        "metric": "25 000+ vues sur Reddit la semaine du lancement",
+        "highlights": [
+          "Recherche par sport, arrondissement, site, date et heure",
+          "Disponibilités de toutes les installations municipales en un coup d'œil",
+          "Interface rapide, pensée mobile, avec mode sombre",
+          "Bilingue, conçue pour les Montréalais"
+        ]
+      }
     }
   },
   "aboutPage": {

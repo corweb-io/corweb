@@ -71,11 +71,10 @@
   },
   "portfolio": {
     "badge": "our-work",
-    "title": "Projects in Progress",
-    "description": "We're currently building exciting projects for our first clients. Soon, you'll see real results here.",
-    "projectPlaceholder": "Coming soon...",
-    "earlyBirdMessage": "Want to be one of our first clients? Early adopters get priority attention and special rates.",
-    "cta": "Become an Early Client"
+    "title": "Software Our Clients Run On",
+    "description": "Custom tools built for real businesses, from luxury concierge operations to Québec software companies, plus products we run ourselves.",
+    "viewAll": "See all projects",
+    "cta": "Start Your Project"
   },
   "cta": {
     "badge": "lets-talk",
@@ -195,40 +194,108 @@
   },
   "portfolioPage": {
     "badge": "our-work",
-    "title": "Projects Coming Soon",
-    "description": "We're currently building exciting projects for our first clients. This page will soon showcase real results and success stories.",
-    "categories": {
-      "webApps": "Web Apps",
-      "mobileApps": "Mobile Apps",
-      "tools": "Custom Tools",
-      "integrations": "Integrations"
-    },
-    "projectPlaceholder": "Project in progress",
-    "projectStatus": "Coming soon",
-    "honestSection": {
-      "title": "We're Just Getting Started",
-      "description": "As a new agency, we don't have a portfolio of past projects to show you—yet. What we do have is a fresh approach, AI-accelerated development capabilities, and the dedication to make every early client a success story."
-    },
-    "earlyBenefits": {
-      "title": "Why Be an Early Client?",
-      "description": "Early adopters get special treatment. Here's what you can expect.",
-      "benefit1": {
-        "title": "Priority Attention",
-        "description": "With fewer clients, you get more of our focus and faster response times."
-      },
-      "benefit2": {
-        "title": "Flexible Timeline",
-        "description": "We work around your schedule and adapt to your needs as the project evolves."
-      },
-      "benefit3": {
-        "title": "Founding Partner Rates",
-        "description": "Special pricing for clients who help us build our portfolio and reputation."
-      }
+    "title": "Selected Work",
+    "description": "Custom web apps and tools we've designed, built and shipped, each one tailored to how the business actually works.",
+    "visit": "Visit site",
+    "highlightsLabel": "What we built",
+    "kinds": {
+      "client": "Client project",
+      "product": "Corweb product"
     },
     "cta": {
-      "title": "Be Part of Our Portfolio",
-      "description": "Your project could be the first featured here. Let's create something amazing together.",
+      "title": "Your Project Could Be Next",
+      "description": "Tell us how your business runs today, and we'll show you the software that would make it easier.",
       "button": "Start Your Project"
+    }
+  },
+  "projects": {
+    "items": {
+      "rallia": {
+        "name": "Rallia",
+        "client": "Racquet-sports app, Montréal",
+        "tagline": "Matchmaking for tennis and pickleball players.",
+        "description": "Our own iOS and Android app, launched in Montréal: it connects players at the same level for real, scheduled games, and runs leagues and tournaments on autopilot.",
+        "metric": "1,000+ players · 880+ games played",
+        "highlights": [
+          "Interactive court map with real-time availability",
+          "Verified skill levels (NTRP / DUPR) and reliability scores",
+          "Open-games marketplace, chat and invitations",
+          "Automated leagues and tournaments with Stripe payments"
+        ]
+      },
+      "alfred": {
+        "name": "Alfred",
+        "client": "Luxury villa concierge, Saint-Barth",
+        "tagline": "The back office for a luxury villa concierge.",
+        "description": "One platform to run high-end villa stays, replacing spreadsheets and WhatsApp threads with a single source of truth for the whole team.",
+        "highlights": [
+          "Guest profiles with structured preferences and briefings",
+          "Shared operations calendar with alerts and push notifications",
+          "Pre-arrival villa checklists and task boards per stay",
+          "Service-provider directory, commission tracking and shareable itineraries"
+        ]
+      },
+      "msm": {
+        "name": "MSM",
+        "client": "Montreal Software Machine",
+        "tagline": "A complete website redesign for a Québec software company.",
+        "description": "A modern, bilingual-ready site for a business-software vendor serving Québec since 1998, delivered as a fast static build that runs on their existing hosting.",
+        "highlights": [
+          "Solutions, products, pricing, careers and support pages",
+          "Light and dark mode, with a refreshed visual identity",
+          "Contact form and redirects for every legacy URL",
+          "Static export packaged for their Plesk server, no Node.js needed"
+        ]
+      },
+      "nutrisoft": {
+        "name": "NutriSoft",
+        "client": "MSM's food-industry software",
+        "tagline": "A new website for software built for the food industry.",
+        "description": "The marketing site for NutriSoft, MSM's suite for food producers, distributors and processors, including tools that work with no internet connection at all.",
+        "highlights": [
+          "Video hero showcasing the industries served",
+          "Sector and region pages for the agri-food market",
+          "Support, contact and legal pages",
+          "Light and dark mode, mobile navigation"
+        ]
+      },
+      "alize": {
+        "name": "Alizé",
+        "client": "SaaS for Saint-Barth entrepreneurs",
+        "tagline": "Invoicing and admin for island entrepreneurs.",
+        "description": "Our own product, built for Saint-Barth's micro-entrepreneurs and small companies, whose local tax rules mainstream tools don't handle.",
+        "highlights": [
+          "Quotes and compliant French-format PDF invoices",
+          "Revenue tracking across several businesses",
+          "Local CPS contribution estimates built in",
+          "Free tier with a Pro plan through Stripe"
+        ]
+      },
+      "madeWithPeace": {
+        "name": "Made with Peace",
+        "client": "Fashion brand",
+        "tagline": "A custom denim designer for a fashion brand.",
+        "description": "An interactive tool where customers design their own jeans, then send the finished design straight to the workshop.",
+        "highlights": [
+          "Pick a wash and size, then drag and rotate embroidered kiss patches",
+          "Front and back views with photorealistic patches",
+          "Designs emailed to the brand as an order spec sheet",
+          "Bilingual, mobile-friendly interface"
+        ]
+      },
+      "creneauSport": {
+        "name": "CréneauSport",
+        "client": "Public sports booking, Montréal",
+        "tagline": "Booking Montréal's sports facilities, minus the pain.",
+        "description": "A modern, mobile-first replacement for the City of Montréal's facility booking flow, so residents find a free court or field in seconds.",
+        "metric": "25k+ views on Reddit in launch week",
+        "highlights": [
+          "Search by sport, borough, venue, date and time",
+          "Availability across all municipal facilities at once",
+          "Fast, mobile-first interface with dark mode",
+          "Bilingual, built for Montréal residents"
+        ]
+      }
     }
   },
   "aboutPage": {

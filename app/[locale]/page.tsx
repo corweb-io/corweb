@@ -16,6 +16,8 @@ import {
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { projects } from "@/lib/projects";
+import { ProjectPreview } from "@/components/portfolio/project-card";
 import { Header, Footer } from "@/components/layout";
 import {
   FadeInUp,
@@ -309,63 +311,44 @@ async function build(vision) {
           </div>
         </section>
 
-        {/* Portfolio Teaser Section */}
+        {/* Portfolio Section */}
         <section className="py-24 relative">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="relative p-8 md:p-12 rounded-2xl bg-card/50 border border-border overflow-hidden">
-              {/* Background decoration */}
-              <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[150px] bg-primary/5" />
-                <div className="absolute top-10 right-10 font-mono text-xs text-foreground/5 select-none hidden md:block">
-                  <pre>{`// projects.loading()
-const portfolio = await
-  fetchProjects();`}</pre>
-                </div>
+            <div className="max-w-2xl mx-auto text-center mb-14">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono mb-6 bg-primary/10 text-primary border border-primary/20">
+                <Terminal className="w-3 h-3" />
+                {t("portfolio.badge")}
               </div>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+                {t("portfolio.title")}
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                {t("portfolio.description")}
+              </p>
+            </div>
 
-              <div className="relative z-10 max-w-2xl mx-auto text-center">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono mb-6 bg-primary/10 text-primary border border-primary/20">
-                  <Terminal className="w-3 h-3" />
-                  {t("portfolio.badge")}
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                  {t("portfolio.title")}
-                </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  {t("portfolio.description")}
-                </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              {projects
+                .filter((project) => project.featured)
+                .map((project) => (
+                <ProjectPreview key={project.slug} project={project} />
+              ))}
+            </div>
 
-                {/* Placeholder project cards */}
-                <div className="grid md:grid-cols-2 gap-6 mb-8">
-                  <div className="p-6 rounded-xl bg-background/50 border border-dashed border-border/50 flex flex-col items-center justify-center min-h-[200px]">
-                    <div className="w-16 h-16 rounded-xl bg-primary/5 border border-primary/10 flex items-center justify-center mb-4">
-                      <Code2 className="w-8 h-8 text-primary/30" />
-                    </div>
-                    <span className="text-sm font-mono text-muted-foreground">
-                      {t("portfolio.projectPlaceholder")}
-                    </span>
-                  </div>
-                  <div className="p-6 rounded-xl bg-background/50 border border-dashed border-border/50 flex flex-col items-center justify-center min-h-[200px]">
-                    <div className="w-16 h-16 rounded-xl bg-primary/5 border border-primary/10 flex items-center justify-center mb-4">
-                      <Smartphone className="w-8 h-8 text-primary/30" />
-                    </div>
-                    <span className="text-sm font-mono text-muted-foreground">
-                      {t("portfolio.projectPlaceholder")}
-                    </span>
-                  </div>
-                </div>
-
-                <p className="text-sm text-muted-foreground mb-6">
-                  {t("portfolio.earlyBirdMessage")}
-                </p>
-                <Link
-                  href="/contact"
-                  className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25"
-                >
-                  {t("portfolio.cta")}
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <Link
+                href="/portfolio"
+                className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25"
+              >
+                {t("portfolio.viewAll")}
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 px-6 py-3 font-semibold rounded-lg border border-border hover:border-primary/40 transition-colors"
+              >
+                {t("portfolio.cta")}
+              </Link>
             </div>
           </div>
         </section>
